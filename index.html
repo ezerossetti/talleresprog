@@ -754,6 +754,53 @@
       </div>
     </div>
 
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class="socios-final-form">
+      <div class="socios-final-form-copy">
+        <span>ESTAMOS PARA ESCUCHARTE</span>
+        <h3>¿TENÉS UNA<br><strong>CONSULTA?</strong></h3>
+        <p>Dejanos tus datos y tu mensaje. Este formulario es parte de la experiencia institucional de la página.</p>
+        <div class="socios-final-form-note">
+          <i class="bi bi-chat-left-text"></i>
+          <div><b>ATENCIÓN AL SOCIO</b><small>Completá el formulario y contanos en qué podemos ayudarte.</small></div>
+        </div>
+      </div>
+
+      <form class="socios-final-form-fields" action="#" method="post">
+        <div class="socios-form-row">
+          <div class="socios-form-group">
+            <label for="nombreSocio">NOMBRE Y APELLIDO</label>
+            <input type="text" id="nombreSocio" name="nombre" placeholder="Tu nombre y apellido" required>
+          </div>
+          <div class="socios-form-group">
+            <label for="emailSocio">EMAIL</label>
+            <input type="email" id="emailSocio" name="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+
+        <div class="socios-form-group">
+          <label for="motivoSocio">MOTIVO DE LA CONSULTA</label>
+          <select id="motivoSocio" name="motivo" required>
+            <option value="" selected disabled>Seleccioná una opción</option>
+            <option value="socios">Consulta de socios</option>
+            <option value="beneficios">Beneficios y descuentos</option>
+            <option value="partidos">Partidos e ingreso</option>
+            <option value="otro">Otra consulta</option>
+          </select>
+        </div>
+
+        <div class="socios-form-group">
+          <label for="mensajeSocio">MENSAJE</label>
+          <textarea id="mensajeSocio" name="mensaje" rows="5" placeholder="Escribí tu consulta..." required></textarea>
+        </div>
+
+        <button type="submit" class="socios-final-form-button">
+          ENVIAR CONSULTA <i class="bi bi-arrow-up-right"></i>
+        </button>
+      </form>
+    </div>
+
     <!-- CONTACTO -->
     <div class="socios-final-contact">
       <div><span>ATENCIÓN AL SOCIO</span><strong>351 226 8833</strong><small>WhatsApp</small></div>

@@ -1724,3 +1724,139 @@ body{background:#fff;overflow-x:hidden;}
   .socios-final-cuota-placeholder{min-height:230px}
   .socios-final-faq{padding:55px 0 10px}
 }
+
+
+/* Formulario institucional — Socios */
+.socios-final-benefit-intro h3,
+.socios-final-section-title h3{
+  font-family:'Jost',sans-serif;
+  font-size:clamp(3.2rem,4.8vw,5.1rem);
+  line-height:.84;
+  letter-spacing:-2.7px;
+  text-transform:uppercase;
+  margin:10px 0 0;
+  font-weight:900;
+  color:#081a36;
+}
+.socios-final-benefit-intro h3{font-size:clamp(3.4rem,5vw,5.25rem)}
+.socios-final-form{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+  margin-top:0;
+  padding:78px 0 76px;
+  border-bottom:1px solid #dce3eb;
+}
+.socios-final-form-copy>span{
+  font-size:.58rem;
+  letter-spacing:2.3px;
+  color:#0a5dcc;
+  font-weight:900;
+}
+.socios-final-form-copy h3{
+  font-family:'Jost',sans-serif;
+  font-size:clamp(3.3rem,5vw,5.1rem);
+  line-height:.84;
+  letter-spacing:-2.8px;
+  text-transform:uppercase;
+  margin:10px 0 0;
+  font-weight:900;
+  color:#081a36;
+}
+.socios-final-form-copy h3 strong{color:#0a5dcc}
+.socios-final-form-copy>p{
+  max-width:350px;
+  color:#718096;
+  font-size:.7rem;
+  line-height:1.7;
+  margin:22px 0 28px;
+}
+.socios-final-form-note{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  max-width:350px;
+  padding-top:18px;
+  border-top:1px solid #dce3eb;
+}
+.socios-final-form-note i{
+  color:#0a5dcc;
+  font-size:1.1rem;
+  margin-top:2px;
+}
+.socios-final-form-note b{
+  display:block;
+  color:#081a36;
+  font-size:.62rem;
+  letter-spacing:1px;
+}
+.socios-final-form-note small{
+  display:block;
+  color:#718096;
+  font-size:.62rem;
+  line-height:1.5;
+  margin-top:4px;
+}
+.socios-final-form-fields{
+  background:#f5f7fa;
+  padding:32px;
+  border:1px solid #dce3eb;
+}
+.socios-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.socios-form-group{margin-bottom:20px}
+.socios-form-group label{
+  display:block;
+  color:#081a36;
+  font-size:.58rem;
+  font-weight:900;
+  letter-spacing:1.2px;
+  margin-bottom:8px;
+}
+.socios-form-group input,
+.socios-form-group select,
+.socios-form-group textarea{
+  width:100%;
+  border:1px solid #ccd5e0;
+  background:#fff;
+  color:#081a36;
+  padding:13px 14px;
+  font-family:inherit;
+  font-size:.68rem;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s;
+}
+.socios-form-group textarea{resize:vertical;min-height:120px}
+.socios-form-group input:focus,
+.socios-form-group select:focus,
+.socios-form-group textarea:focus{
+  border-color:#0a5dcc;
+  box-shadow:0 0 0 3px rgba(10,93,204,.08);
+}
+.socios-form-group input::placeholder,
+.socios-form-group textarea::placeholder{color:#9aa6b5}
+.socios-final-form-button{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  border:0;
+  background:#0a5dcc;
+  color:#fff;
+  padding:14px 21px;
+  font-size:.61rem;
+  letter-spacing:1.4px;
+  font-weight:900;
+  cursor:pointer;
+  transition:.2s;
+}
+.socios-final-form-button:hover{background:#073f92;transform:translateY(-2px)}
+@media(max-width:950px){
+  .socios-final-form{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:575px){
+  .socios-final-benefit-intro h3,
+  .socios-final-section-title h3{font-size:3.35rem}
+  .socios-final-form{padding:55px 0}
+  .socios-final-form-copy h3{font-size:3.35rem}
+  .socios-final-form-fields{padding:23px 20px}
+  .socios-form-row{grid-template-columns:1fr;gap:0}
+}
