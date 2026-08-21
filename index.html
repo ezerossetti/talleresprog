@@ -708,21 +708,52 @@
       </div>
     </div>
 
-    <!-- CUOTA SOCIAL -->
-    <div class="socios-final-cuota">
-      <div class="socios-final-cuota-copy">
-        <span>CUOTA SOCIAL</span>
-        <h3>El valor de<br><strong>ser Talleres.</strong></h3>
-        <p>Consultá el valor vigente de la cuota social y conocé las opciones disponibles para mantener tu membresía al día.</p>
-        <a href="https://socios.clubtalleres.com.ar/" target="_blank" rel="noopener">CONSULTAR CUOTA <i class="bi bi-arrow-up-right"></i></a>
+    <!-- UBICACIONES EN EL ESTADIO -->
+    <div class="socios-estadio" id="socios-estadio">
+      <div class="socios-estadio-heading">
+        <span>UBICACIONES EN EL ESTADIO</span>
+        <h3>Elegí tu lugar.<br><strong>Viví el partido.</strong></h3>
+        <p>Pasá el cursor por los sectores para conocer el valor de la cuota según la ubicación.</p>
       </div>
-      <div class="socios-final-cuota-media">
-        <div class="socios-final-cuota-placeholder">
-          <span>CUOTA SOCIAL</span>
-          <strong>COLOCÁ AQUÍ<br>cuota.jpg</strong>
-          <small>1024 × 740 px</small>
+
+      <div class="socios-estadio-layout">
+        <div class="socios-estadio-photo-wrap" id="sociosEstadioPhotoWrap">
+          <img id="sociosEstadioPhoto" src="assets/images/ardiles.webp" alt="Platea Ardiles - Estadio Mario Alberto Kempes">
+          <div class="socios-estadio-hotspots" id="sociosEstadioHotspots" aria-hidden="true">
+            <span class="socios-estadio-hotspot hotspot-main" data-sector="ardiles"></span>
+          </div>
+          <div class="socios-estadio-photo-shade"></div>
+          <div class="socios-estadio-label" id="sociosEstadioLabel">
+            <span>UBICACIÓN SELECCIONADA</span>
+            <strong>PLATEA ARDILES</strong>
+          </div>
+
+          <div class="socios-estadio-prices" id="sociosEstadioPrices" aria-hidden="true">
+            <div class="socios-estadio-prices-head">
+              <span>VALORES</span>
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </div>
+            <div class="socios-estadio-price"><b>$147.970</b><span>SOCIO 1913</span></div>
+            <div class="socios-estadio-price"><b>$82.160</b><span>SOCIO ALBIAZUL</span></div>
+            <div class="socios-estadio-price"><b>$68.480</b><span>SOCIO CAT</span></div>
+            <div class="socios-estadio-price"><b>$34.160</b><span>SOCIO JUVENILES</span></div>
+            <div class="socios-estadio-price"><b>$12.560</b><span>SOCIO NIÑOS</span></div>
+          </div>
         </div>
-        <img src="assets/images/cuota.jpg" alt="Valor de la cuota social de Talleres" onerror="this.style.display='none'">
+
+        <aside class="socios-estadio-sectors" aria-label="Sectores del estadio">
+          <div class="socios-estadio-sectors-title">SECTORES</div>
+          <button class="socios-estadio-sector active" type="button" data-sector="ardiles">
+            <span>Platea Ardiles</span><i class="bi bi-arrow-right"></i>
+          </button>
+          <button class="socios-estadio-sector" type="button" data-sector="gasparini">
+            <span>Platea Gasparini</span><i class="bi bi-arrow-right"></i>
+          </button>
+          <button class="socios-estadio-sector" type="button" data-sector="willington">
+            <span>Popular Willington</span><i class="bi bi-arrow-right"></i>
+          </button>
+          <div class="socios-estadio-hint"><i class="bi bi-mouse2"></i><span>Pasá el cursor por un sector para ver sus valores.</span></div>
+        </aside>
       </div>
     </div>
 
@@ -978,5 +1009,128 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+<script>
+(function(){
+  const photo = document.getElementById('sociosEstadioPhoto');
+  const wrap = document.getElementById('sociosEstadioPhotoWrap');
+  const label = document.getElementById('sociosEstadioLabel');
+  const prices = document.getElementById('sociosEstadioPrices');
+  const hotspots = document.getElementById('sociosEstadioHotspots');
+  const buttons = Array.from(document.querySelectorAll('.socios-estadio-sector'));
+  if(!photo || !wrap || !label || !prices || !hotspots || !buttons.length) return;
+
+  const data = {
+    ardiles: {
+      name: 'PLATEA ARDILES',
+      image: 'assets/images/ardiles.webp',
+      alt: 'Platea Ardiles - Estadio Mario Alberto Kempes',
+      hotspots: ['main'],
+      prices: [
+        ['$147.970','SOCIO 1913'],
+        ['$82.160','SOCIO ALBIAZUL'],
+        ['$68.480','SOCIO CAT'],
+        ['$34.160','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    },
+    gasparini: {
+      name: 'PLATEA GASPARINI',
+      image: 'assets/images/gasparini.webp',
+      alt: 'Platea Gasparini - Estadio Mario Alberto Kempes',
+      hotspots: ['left','right'],
+      prices: [
+        ['$66.120','SOCIO 1913'],
+        ['$36.720','SOCIO ALBIAZUL'],
+        ['$30.560','SOCIO CAT'],
+        ['$15.280','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    },
+    willington: {
+      name: 'POPULAR WILLINGTON',
+      image: 'assets/images/willington.webp',
+      alt: 'Popular Willington - Estadio Mario Alberto Kempes',
+      hotspots: ['main'],
+      prices: [
+        ['$93.180','SOCIO 1913'],
+        ['$51.360','SOCIO ALBIAZUL'],
+        ['$42.800','SOCIO CAT'],
+        ['$21.360','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    }
+  };
+
+  function renderPrices(items){
+    prices.querySelectorAll('.socios-estadio-price').forEach((row, i) => {
+      if(!items[i]) return;
+      row.querySelector('b').textContent = items[i][0];
+      row.querySelector('span').textContent = items[i][1];
+    });
+  }
+
+  function buildHotspots(key){
+    const item = data[key];
+    hotspots.innerHTML = '';
+    item.hotspots.forEach(type => {
+      const hotspot = document.createElement('span');
+      hotspot.className = 'socios-estadio-hotspot hotspot-' + type;
+      hotspot.dataset.sector = key;
+      hotspot.setAttribute('aria-label', item.name);
+      hotspots.appendChild(hotspot);
+
+      hotspot.addEventListener('mouseenter', () => showPrices());
+      hotspot.addEventListener('mouseleave', () => hidePrices());
+      hotspot.addEventListener('focus', () => showPrices());
+      hotspot.addEventListener('blur', () => hidePrices());
+      hotspot.addEventListener('click', () => showPrices());
+    });
+  }
+
+  function showPrices(){
+    prices.classList.add('is-visible');
+    prices.setAttribute('aria-hidden','false');
+  }
+
+  function hidePrices(){
+    prices.classList.remove('is-visible');
+    prices.setAttribute('aria-hidden','true');
+  }
+
+  function selectSector(key, showPricesOnSelect = false){
+    const item = data[key];
+    if(!item) return;
+    hidePrices();
+    photo.classList.add('is-changing');
+    window.setTimeout(() => {
+      photo.src = item.image;
+      photo.alt = item.alt;
+      label.querySelector('strong').textContent = item.name;
+      renderPrices(item.prices);
+      buildHotspots(key);
+      photo.classList.remove('is-changing');
+    }, 120);
+    buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.sector === key));
+    if(showPricesOnSelect) showPrices();
+  }
+
+  buttons.forEach(btn => {
+    const key = btn.dataset.sector;
+    // Los botones solo cambian la foto. Los precios aparecen únicamente
+    // al entrar en la zona naranja de la imagen.
+    btn.addEventListener('mouseenter', () => selectSector(key, false));
+    btn.addEventListener('focus', () => selectSector(key, false));
+    btn.addEventListener('click', () => selectSector(key, false));
+  });
+
+  // Importante: no usamos mouseenter/mouseleave en todo el contenedor.
+  // Así la tarjeta NO aparece al pasar por cualquier parte de la foto.
+  // Solo los hotspots transparentes sobre las zonas naranjas la activan.
+
+  selectSector('ardiles', false);
+})();
+</script>
+
 </body>
 </html>

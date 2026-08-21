@@ -1681,21 +1681,6 @@ body{background:#fff;overflow-x:hidden;}
 /* Socios — cuota social y preguntas frecuentes */
 .socios-final{border-top:0}
 .socios-final-top{display:none}
-.socios-final-cuota{display:grid;grid-template-columns:.78fr 1.22fr;gap:0;background:#071b3b;color:#fff;margin-top:70px;min-height:390px;overflow:hidden;position:relative}
-.socios-final-cuota:after{content:'$';position:absolute;right:-35px;bottom:-105px;font-family:'Jost',sans-serif;font-size:24rem;font-weight:900;line-height:.8;color:rgba(255,255,255,.025);pointer-events:none}
-.socios-final-cuota-copy{padding:54px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.socios-final-cuota-copy>span{font-size:.58rem;letter-spacing:2.3px;color:#62a4ff;font-weight:900}
-.socios-final-cuota-copy h3{font-family:'Jost',sans-serif;font-size:clamp(3rem,4.7vw,5rem);line-height:.84;letter-spacing:-2.8px;text-transform:uppercase;margin:10px 0 0;font-weight:900}
-.socios-final-cuota-copy h3 strong{color:#62a4ff}
-.socios-final-cuota-copy p{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.62);max-width:380px;margin:22px 0 26px}
-.socios-final-cuota-copy a{display:inline-flex;align-items:center;gap:16px;align-self:flex-start;background:#0a5dcc;color:#fff;text-decoration:none;padding:14px 21px;font-size:.61rem;letter-spacing:1.4px;font-weight:900;transition:.2s}
-.socios-final-cuota-copy a:hover{background:#146ee2;color:#fff;transform:translateY(-2px)}
-.socios-final-cuota-media{margin:22px;min-height:346px;position:relative;overflow:hidden;background:#0d2a57;display:flex;align-items:center;justify-content:center}
-.socios-final-cuota-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:2}
-.socios-final-cuota-placeholder{position:relative;z-index:1;width:calc(100% - 38px);height:calc(100% - 38px);min-height:300px;border:1px dashed rgba(255,255,255,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:rgba(255,255,255,.72);background:linear-gradient(135deg,rgba(255,255,255,.025),rgba(255,255,255,.06))}
-.socios-final-cuota-placeholder span{font-size:.55rem;letter-spacing:2.2px;color:#62a4ff;font-weight:900}
-.socios-final-cuota-placeholder strong{font-family:'Jost',sans-serif;font-size:2rem;line-height:.95;letter-spacing:-.7px;margin-top:12px;color:#fff}
-.socios-final-cuota-placeholder small{font-size:.55rem;color:rgba(255,255,255,.42);margin-top:10px;letter-spacing:1px}
 .socios-final-faq{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;padding:72px 0 20px}
 .socios-final-faq-heading>span{font-size:.58rem;letter-spacing:2.3px;color:#0a5dcc;font-weight:900}
 .socios-final-faq-heading h3{font-family:'Jost',sans-serif;font-size:clamp(2.7rem,4.5vw,4.5rem);line-height:.84;letter-spacing:-2.5px;text-transform:uppercase;margin:9px 0 0;font-weight:900;color:#081a36}
@@ -1711,17 +1696,9 @@ body{background:#fff;overflow-x:hidden;}
 .socios-final-faq-list details a:hover{color:#073f92}
 
 @media(max-width:950px){
-  .socios-final-cuota,.socios-final-faq{grid-template-columns:1fr}
-  .socios-final-cuota-copy{padding:45px 35px 25px}
-  .socios-final-cuota-media{margin:10px 22px 22px;min-height:320px}
   .socios-final-faq{gap:35px}
 }
 @media(max-width:575px){
-  .socios-final-cuota{margin-top:50px}
-  .socios-final-cuota-copy{padding:38px 25px 25px}
-  .socios-final-cuota-copy h3{font-size:3.2rem}
-  .socios-final-cuota-media{margin:8px 14px 14px;min-height:260px}
-  .socios-final-cuota-placeholder{min-height:230px}
   .socios-final-faq{padding:55px 0 10px}
 }
 
@@ -1859,4 +1836,289 @@ body{background:#fff;overflow-x:hidden;}
   .socios-final-form-copy h3{font-size:3.35rem}
   .socios-final-form-fields{padding:23px 20px}
   .socios-form-row{grid-template-columns:1fr;gap:0}
+}
+
+/* =========================================================
+   SOCIOS · UBICACIONES EN EL ESTADIO
+   ========================================================= */
+.socios-estadio{
+  padding:78px 0 82px;
+  border-bottom:1px solid #dce3eb;
+}
+.socios-estadio-heading{
+  margin-bottom:30px;
+}
+.socios-estadio-heading>span{
+  display:block;
+  color:#0a5dcc;
+  font-size:.58rem;
+  letter-spacing:2.6px;
+  font-weight:900;
+  margin-bottom:9px;
+}
+.socios-estadio-heading h3{
+  margin:0;
+  color:#081a36;
+  font-family:'Jost',sans-serif;
+  font-size:clamp(3rem,5.2vw,5.3rem);
+  line-height:.84;
+  letter-spacing:-3px;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.socios-estadio-heading h3 strong{color:#0a5dcc}
+.socios-estadio-heading p{
+  margin:18px 0 0;
+  color:#718096;
+  font-size:.72rem;
+  line-height:1.65;
+}
+.socios-estadio-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 270px;
+  gap:22px;
+  align-items:stretch;
+}
+.socios-estadio-photo-wrap{
+  min-height:570px;
+  position:relative;
+  overflow:hidden;
+  background:#0a2745;
+  border-radius:12px;
+  cursor:default;
+}
+.socios-estadio-photo-wrap:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(8,26,54,.12);
+  border-radius:12px;
+  pointer-events:none;
+}
+.socios-estadio-photo-wrap>img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:opacity .18s ease,transform .45s ease;
+}
+.socios-estadio-photo-wrap>img.is-changing{opacity:.55}
+.socios-estadio-photo-wrap:hover>img{transform:scale(1.012)}
+
+/* Zonas interactivas: los precios solo se disparan al pasar por el sector naranja. */
+.socios-estadio-hotspots{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  pointer-events:none;
+}
+.socios-estadio-hotspot{
+  position:absolute;
+  display:block;
+  pointer-events:auto;
+  cursor:pointer;
+  background:transparent;
+}
+/* Ardiles / Willington: tribuna principal resaltada en naranja. */
+.socios-estadio-hotspot.hotspot-main{
+  left:17%;
+  top:34%;
+  width:80%;
+  height:40%;
+  clip-path:polygon(3% 0, 100% 0, 86% 100%, 1% 100%);
+}
+/* Gasparini: las dos plateas laterales, dejando libre el palco central. */
+.socios-estadio-hotspot.hotspot-left,
+.socios-estadio-hotspot.hotspot-right{
+  top:35%;
+  height:40%;
+}
+.socios-estadio-hotspot.hotspot-left{
+  left:0;
+  width:41%;
+  clip-path:polygon(0 0, 100% 0, 92% 100%, 5% 100%);
+}
+.socios-estadio-hotspot.hotspot-right{
+  right:0;
+  width:41%;
+  clip-path:polygon(0 0, 100% 0, 95% 100%, 8% 100%);
+}
+.socios-estadio-label{
+  pointer-events:none;
+}
+.socios-estadio-photo-shade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(3,24,62,.05) 42%,rgba(3,24,62,.45) 100%);
+  pointer-events:none;
+}
+.socios-estadio-label{
+  position:absolute;
+  left:25px;
+  bottom:23px;
+  z-index:3;
+  color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+.socios-estadio-label span{
+  display:block;
+  font-size:.52rem;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:5px;
+}
+.socios-estadio-label strong{
+  display:block;
+  font-family:'Jost',sans-serif;
+  font-size:1.55rem;
+  line-height:.95;
+  letter-spacing:.2px;
+}
+.socios-estadio-prices{
+  pointer-events:none;
+  position:absolute;
+  z-index:5;
+  top:50%;
+  right:25px;
+  width:285px;
+  padding:18px 19px 14px;
+  transform:translateY(-50%) translateX(18px);
+  opacity:0;
+  visibility:hidden;
+  background:rgba(255,255,255,.97);
+  border:2px solid #ff6b00;
+  border-radius:14px;
+  box-shadow:0 18px 45px rgba(0,0,0,.2);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s ease;
+}
+.socios-estadio-prices.is-visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(-50%) translateX(0);
+}
+.socios-estadio-prices-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 0 10px;
+  border-bottom:1px solid #e3e7ec;
+}
+.socios-estadio-prices-head span{
+  color:#15306f;
+  font-family:'Jost',sans-serif;
+  font-size:1rem;
+  letter-spacing:.5px;
+  font-weight:900;
+}
+.socios-estadio-prices-head i{
+  color:#a2adba;
+  font-size:.6rem;
+}
+.socios-estadio-price{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:8px;
+  align-items:center;
+  min-height:42px;
+  border-bottom:1px solid #e4e8ed;
+}
+.socios-estadio-price:last-child{border-bottom:0}
+.socios-estadio-price b{
+  color:#ff6b00;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.1px;
+}
+.socios-estadio-price span{
+  color:#15306f;
+  font-size:.61rem;
+  font-weight:900;
+  line-height:1.1;
+}
+.socios-estadio-sectors{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.socios-estadio-sectors-title{
+  display:flex;
+  align-items:center;
+  min-height:54px;
+  padding:0 20px;
+  border-radius:9px;
+  background:#172574;
+  color:#fff;
+  font-family:'Jost',sans-serif;
+  font-size:1.15rem;
+  letter-spacing:.2px;
+  font-weight:900;
+}
+.socios-estadio-sector{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  min-height:56px;
+  padding:0 16px 0 20px;
+  border:0;
+  border-bottom:1px solid #dce3eb;
+  background:#fff;
+  color:#09265f;
+  font-family:inherit;
+  font-size:.72rem;
+  font-weight:800;
+  text-align:left;
+  cursor:pointer;
+  transition:background .2s ease,color .2s ease,padding .2s ease;
+}
+.socios-estadio-sector i{
+  opacity:0;
+  transform:translateX(-5px);
+  transition:.2s ease;
+}
+.socios-estadio-sector:hover,
+.socios-estadio-sector.active{
+  background:#ff6b00;
+  color:#fff;
+  border-radius:9px;
+  border-bottom-color:#ff6b00;
+  padding-left:22px;
+}
+.socios-estadio-sector:hover i,
+.socios-estadio-sector.active i{opacity:1;transform:translateX(0)}
+.socios-estadio-hint{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:auto;
+  padding:18px 5px 0;
+  color:#8a97a8;
+  font-size:.58rem;
+  line-height:1.5;
+}
+.socios-estadio-hint i{color:#0a5dcc;font-size:.9rem;margin-top:1px}
+@media(max-width:950px){
+  .socios-estadio-layout{grid-template-columns:1fr}
+  .socios-estadio-photo-wrap{min-height:520px}
+  .socios-estadio-sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .socios-estadio-sectors-title{grid-column:1/-1}
+  .socios-estadio-sector{border:1px solid #dce3eb;border-radius:9px}
+  .socios-estadio-hint{grid-column:1/-1;margin-top:4px}
+}
+@media(max-width:575px){
+  .socios-estadio{padding:55px 0 60px}
+  .socios-estadio-heading h3{font-size:3.2rem;letter-spacing:-2px}
+  .socios-estadio-photo-wrap{min-height:390px;border-radius:9px}
+  .socios-estadio-prices{top:auto;right:12px;bottom:12px;width:calc(100% - 24px);transform:translateY(12px);padding:13px 14px 10px}
+  .socios-estadio-prices.is-visible{transform:translateY(0)}
+  .socios-estadio-price{min-height:34px;grid-template-columns:92px 1fr}
+  .socios-estadio-price b{font-size:.7rem}
+  .socios-estadio-price span{font-size:.56rem}
+  .socios-estadio-label{left:16px;bottom:17px}
+  .socios-estadio-label strong{font-size:1.2rem}
+  .socios-estadio-sectors{grid-template-columns:1fr}
+  .socios-estadio-sector{min-height:50px}
 }
