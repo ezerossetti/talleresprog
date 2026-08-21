@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" role="img" aria-labelledby="estadioTitle">
+  <title id="estadioTitle">Ilustración de estadio con reflectores</title>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#bcd6ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#bcd6ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="90" cy="40" r="220" fill="url(#glow)"/>
+  <circle cx="1110" cy="40" r="220" fill="url(#glow)"/>
+
+  <g stroke="#e8f0ff" stroke-width="4" opacity="0.85">
+    <line x1="70" y1="10" x2="70" y2="140"/>
+    <line x1="1130" y1="10" x2="1130" y2="140"/>
+  </g>
+  <g fill="#f4f8ff">
+    <rect x="40" y="4" width="60" height="16" rx="3"/>
+    <rect x="1100" y="4" width="60" height="16" rx="3"/>
+  </g>
+
+  <path d="M0,240 C120,180 220,300 340,230 C460,170 540,290 660,225
+           C780,165 860,285 980,220 C1080,168 1140,210 1200,190
+           L1200,360 L0,360 Z" fill="#0a2f70" opacity="0.9"/>
+
+  <path d="M0,270 C140,220 240,320 360,260 C480,205 560,310 680,255
+           C800,200 880,300 1000,250 C1090,210 1150,235 1200,222
+           L1200,360 L0,360 Z" fill="#04204f"/>
+</svg>

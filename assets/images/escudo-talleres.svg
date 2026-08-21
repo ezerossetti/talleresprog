@@ -1,0 +1,30 @@
+<svg viewBox="0 0 220 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="escudoTitle">
+  <title id="escudoTitle">Emblema del club</title>
+  <defs>
+    <linearGradient id="gradEscudo" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1355c4"/>
+      <stop offset="55%" stop-color="#0b3d91"/>
+      <stop offset="100%" stop-color="#04204f"/>
+    </linearGradient>
+    <linearGradient id="gradFranja" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dbe8ff"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M110 6 L206 42 L206 118 C206 182 166 222 110 244 C54 222 14 182 14 118 L14 42 Z"
+        fill="url(#gradEscudo)" stroke="#ffffff" stroke-width="7"/>
+
+  <path d="M110 6 L206 42 L206 118 C206 182 166 222 110 244 C54 222 14 182 14 118 L14 42 Z"
+        fill="none" stroke="#04204f" stroke-width="2" opacity="0.4"/>
+
+  <polygon points="110,58 118,80 141,80 122,94 129,116 110,103 91,116 98,94 79,80 102,80"
+           fill="url(#gradFranja)"/>
+
+  <text x="110" y="185" text-anchor="middle" font-family="'Oswald', 'Arial Narrow', sans-serif"
+        font-weight="700" font-size="88" fill="#ffffff">T</text>
+
+  <rect x="34" y="198" width="152" height="26" rx="4" fill="#ffffff"/>
+  <text x="110" y="217" text-anchor="middle" font-family="'Oswald', 'Arial Narrow', sans-serif"
+        font-weight="600" font-size="16" letter-spacing="2" fill="#0b3d91">1913</text>
+</svg>
