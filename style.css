@@ -2122,3 +2122,34 @@ body{background:#fff;overflow-x:hidden;}
   .socios-estadio-sectors{grid-template-columns:1fr}
   .socios-estadio-sector{min-height:50px}
 }
+
+/* =========================================================
+   SOCIOS · CREATIVA COMPLETA
+   La pieza entregada por comunicación se muestra íntegra,
+   sin recortes ni overlays, manteniendo su composición original.
+   ========================================================= */
+.socios-final-hero-full{
+  display:block;
+  min-height:0;
+  border-bottom:1px solid #dce3eb;
+}
+.socios-final-creative{
+  display:block;
+  width:100%;
+  background:#051a45;
+  overflow:hidden;
+  text-decoration:none;
+}
+.socios-final-creative img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+}
+.socios-final-creative:focus-visible{
+  outline:3px solid #8bd600;
+  outline-offset:-3px;
+}
+@media(max-width:950px){
+  .socios-final-hero-full{margin-left:0;margin-right:0}
+}
