@@ -2448,3 +2448,60 @@ body{background:#fff;overflow-x:hidden;}
   .socios-final-contact>div{border-right:0;border-bottom:1px solid var(--socios-line)}
   .socios-final-contact>div:last-child{border-bottom:0}
 }
+
+/* ===== Tienda 2026 · rediseño premium ===== */
+.tienda-premium{background:#f3f6f9!important;padding:92px 0 84px!important;overflow:hidden}
+.shop-hero{display:grid;grid-template-columns:.8fr 1.2fr;min-height:560px;background:#061a33;color:#fff;margin-bottom:74px;box-shadow:0 24px 70px rgba(6,26,51,.14)}
+.shop-hero-copy{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.shop-hero-copy .section-kicker{color:#6aaef7}
+.shop-hero-copy h2{font-family:'Jost',sans-serif;text-transform:uppercase;font-size:clamp(3rem,5vw,5.5rem);line-height:.88;letter-spacing:-2.5px;margin:14px 0 24px;font-weight:900}
+.shop-hero-copy h2 em{font-style:normal;color:#5da7f5}
+.shop-hero-copy>p{max-width:470px;color:rgba(255,255,255,.7);line-height:1.8;margin:0 0 30px}
+.shop-hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.shop-hero-actions .shop-button{background:#fff;color:#061a33}
+.shop-hero-actions .shop-button:hover{background:#5da7f5;color:#061a33}
+.shop-note{font-size:.66rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.62);font-weight:800;display:inline-flex;gap:8px;align-items:center}
+.shop-note i{color:#5da7f5;font-size:1rem}
+.shop-team-photo{position:relative;min-height:560px;overflow:hidden;background:#0a2749}
+.shop-team-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,26,51,.15),transparent 45%,rgba(6,26,51,.2));pointer-events:none}
+.shop-team-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.shop-hero:hover .shop-team-photo img{transform:scale(1.025)}
+.shop-photo-caption{position:absolute;left:28px;bottom:24px;right:28px;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.28);padding-top:15px;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.shop-photo-caption span{font-size:.58rem;letter-spacing:1.7px;font-weight:900;color:#fff}
+.shop-photo-caption strong{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.1;text-transform:uppercase;max-width:320px;text-align:right}
+.shop-section-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:25px}
+.shop-section-head h3{font-family:'Jost',sans-serif;text-transform:uppercase;color:#08284a;font-size:clamp(2rem,3.3vw,3.4rem);line-height:.95;margin:8px 0 0;font-weight:900;letter-spacing:-1.5px}
+.shop-section-head p{max-width:440px;color:#65748a;font-size:.78rem;line-height:1.7;margin:0}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.product-tile{background:#fff;border:1px solid #dce3ea;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.product-tile:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(8,40,74,.11);border-color:#1766c5}
+.product-art{height:255px;background:#0b2747;position:relative;overflow:hidden;padding:28px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+.product-art:before{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-70px;top:-70px}
+.product-art:after{content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:20px;bottom:-90px}
+.product-art span,.product-art small{position:relative;z-index:1;font-size:.58rem;letter-spacing:1.6px;font-weight:900}
+.product-art strong{position:relative;z-index:1;font-family:'Jost',sans-serif;font-size:5.3rem;line-height:.8;letter-spacing:-4px;color:#fff}
+.product-art small{opacity:.58}
+.product-art-blue{background:linear-gradient(145deg,#0a2f5b,#1766c5)}
+.product-art-light{background:linear-gradient(145deg,#eef3f7,#fff);color:#08284a}
+.product-art-light strong{color:#08284a}
+.product-art-light:before{border-color:rgba(8,40,74,.12)}
+.product-art-light:after{border-color:rgba(8,40,74,.08)}
+.product-art-white{background:linear-gradient(145deg,#102c4d,#061a33)}
+.product-info{padding:21px 21px 20px}
+.product-info>span{font-size:.55rem;letter-spacing:1.4px;color:#1766c5;font-weight:900}
+.product-info h4{font-family:'Jost',sans-serif;text-transform:uppercase;color:#08284a;font-size:1.05rem;line-height:1.05;margin:8px 0 5px;min-height:35px}
+.product-info p{font-size:.58rem;letter-spacing:1.2px;color:#7a8797;margin:0 0 17px}
+.product-info>div{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e3e8ed;padding-top:15px}
+.product-info b{font-family:'Jost',sans-serif;font-size:1.12rem;color:#08284a}
+.product-info a{font-size:.58rem;font-weight:900;letter-spacing:1.1px;text-decoration:none;color:#1766c5}
+.product-info a:hover{color:#08284a}
+@media(max-width:991px){.shop-hero{grid-template-columns:1fr}.shop-hero-copy{min-height:470px}.shop-team-photo{min-height:480px}.product-grid{grid-template-columns:repeat(2,1fr)}.shop-section-head{align-items:start;flex-direction:column;gap:16px}}
+@media(max-width:575px){.tienda-premium{padding:68px 0 65px!important}.shop-hero{margin-bottom:55px}.shop-hero-copy{padding:42px 27px;min-height:430px}.shop-hero-copy h2{font-size:3rem}.shop-team-photo{min-height:300px}.shop-photo-caption{left:18px;right:18px;bottom:18px}.shop-photo-caption strong{font-size:.75rem}.product-grid{grid-template-columns:1fr}.product-art{height:230px}}
+
+/* TIENDA · fotografías reales de producto */
+.product-photo-tile .product-photo{height:255px;position:relative;overflow:hidden;background:linear-gradient(145deg,#eef3f7,#fff);display:flex;align-items:center;justify-content:center}
+.product-photo-tile .product-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .45s ease}
+.product-photo-tile:hover .product-photo img{transform:scale(1.035)}
+.product-photo-tile .product-photo.image-fallback{background:linear-gradient(145deg,#0a2f5b,#1766c5)}
+.product-photo-tile .product-photo.image-fallback:after{content:'TIENDA OFICIAL · 2026';color:#fff;font-size:.62rem;font-weight:900;letter-spacing:1.5px}
+@media(max-width:575px){.product-photo-tile .product-photo{height:230px}}
