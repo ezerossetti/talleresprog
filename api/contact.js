@@ -227,6 +227,51 @@ function emailLayout(title, intro, content) {
 </body></html>`;
 }
 
+function knownProjectAnswer(mensaje) {
+  const q = String(mensaje || "").toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  const sectors = {
+    ardiles: {
+      "1913": "$147.970",
+      "albiazul": "$82.160",
+      "cat": "$68.480",
+      "juveniles": "$34.160",
+      "ninos": "$12.560",
+      "niños": "$12.560"
+    },
+    gasparini: {
+      "1913": "$66.120",
+      "albiazul": "$36.720",
+      "cat": "$30.560",
+      "juveniles": "$15.280",
+      "ninos": "$12.560",
+      "niños": "$12.560"
+    }
+  };
+
+  const sector = Object.keys(sectors).find(s => q.includes(s));
+  if (!sector) return null;
+
+  let category = null;
+  if (/\b1913\b/.test(q) || /categoria\\s*1913/.test(q)) category = "1913";
+  else if (/\balbiazul\b/.test(q)) category = "albiazul";
+  else if (/\\bcat\\b|categoria\\s*cat/.test(q)) category = "cat";
+  else if (/juvenil/.test(q)) category = "juveniles";
+  else if (/nino/.test(q)) category = "ninos";
+
+  const asksPrice = /(cuanto|cuánto|valor|precio|sale|cuesta|costo|pagar|cuota)/.test(q);
+  if (!asksPrice || !category || !sectors[sector][category]) return null;
+
+  const label = category === "1913" ? "Socio 1913"
+    : category === "albiazul" ? "Socio Albiazul"
+    : category === "cat" ? "Socio CAT"
+    : category === "juveniles" ? "Socio Juveniles"
+    : "Socio Niños";
+
+  return `Como referencia cargada en esta web, la cuota para ${label} en la platea ${sector[0].toUpperCase()+sector.slice(1)} es de ${sectors[sector][category]}. El valor puede actualizarse, por lo que recomendamos verificar el importe vigente en la sección oficial de asociados de Talleres antes de realizar el pago.`;
+}
+
 async function askOpenAI(nombre, motivo, mensaje) {
   const key = env("OPENAI_API_KEY");
   const model = env("OPENAI_MODEL") || "gpt-5-mini";
@@ -296,7 +341,7 @@ export default async function handler(req, res) {
     const motivoTexto = motivos[motivo] || "Otra consulta";
     const adminEmail = env("ADMIN_EMAIL") || "ezequielrossettti8000@gmail.com";
 
-    const aiReply = await askOpenAI(nombre,motivoTexto,mensaje);
+    const aiReply = knownProjectAnswer(mensaje) || await askOpenAI(nombre,motivoTexto,mensaje);
     const automaticText = aiReply || FALLBACK;
 
     const adminContent = `
