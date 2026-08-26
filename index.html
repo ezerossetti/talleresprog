@@ -834,7 +834,8 @@
         </div>
       </div>
 
-      <form class="socios-final-form-fields" action="#" method="post">
+      <form class="socios-final-form-fields" action="/api/contact" method="post" id="formConsultaSocio">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
         <div class="socios-form-row">
           <div class="socios-form-group">
             <label for="nombreSocio">NOMBRE Y APELLIDO</label>
@@ -866,6 +867,7 @@
           ENVIAR CONSULTA <i class="bi bi-arrow-up-right"></i>
         </button>
       </form>
+      <div id="consultaSocioStatus" class="consulta-socio-status" role="status" aria-live="polite" hidden></div>
     </div>
 
     <!-- CONTACTO -->
@@ -1164,6 +1166,45 @@ document.addEventListener('DOMContentLoaded', function () {
   // Solo los hotspots transparentes sobre las zonas naranjas la activan.
 
   selectSector('ardiles', false);
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById('formConsultaSocio');
+  const status = document.getElementById('consultaSocioStatus');
+  if(!form || !status) return;
+
+  form.addEventListener('submit', async function(event){
+    event.preventDefault();
+    status.hidden = false;
+    status.className = 'consulta-socio-status is-loading';
+    status.textContent = 'ENVIANDO CONSULTA...';
+
+    const button = form.querySelector('button[type="submit"]');
+    const original = button ? button.innerHTML : '';
+    if(button){ button.disabled = true; button.innerHTML = 'ENVIANDO... <i class="bi bi-arrow-repeat"></i>'; }
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await response.json();
+      if(!response.ok || !data.ok) throw new Error(data.message || 'No se pudo enviar la consulta.');
+
+      status.className = 'consulta-socio-status is-success';
+      status.textContent = data.message || '¡Recibimos tu consulta! Revisá tu email.';
+      form.reset();
+    } catch(error) {
+      status.className = 'consulta-socio-status is-error';
+      status.textContent = error.message || 'No pudimos enviar la consulta. Intentá nuevamente.';
+    } finally {
+      if(button){ button.disabled = false; button.innerHTML = original; }
+    }
+  });
 })();
 </script>
 

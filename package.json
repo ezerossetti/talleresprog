@@ -1,0 +1,11 @@
+{
+  "name": "talleres-cordoba-web",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}

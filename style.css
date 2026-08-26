@@ -2505,3 +2505,10 @@ body{background:#fff;overflow-x:hidden;}
 .product-photo-tile .product-photo.image-fallback{background:linear-gradient(145deg,#0a2f5b,#1766c5)}
 .product-photo-tile .product-photo.image-fallback:after{content:'TIENDA OFICIAL · 2026';color:#fff;font-size:.62rem;font-weight:900;letter-spacing:1.5px}
 @media(max-width:575px){.product-photo-tile .product-photo{height:230px}}
+
+/* ===== Formulario de consultas: estado de envío ===== */
+.socios-final-form-button:disabled{opacity:.65;cursor:wait;transform:none!important;}
+.consulta-socio-status{margin-top:14px;padding:13px 15px;font-size:.68rem;font-weight:800;line-height:1.5;letter-spacing:.2px;border-left:3px solid #1766c5;background:#f3f6fa;color:#526175;}
+.consulta-socio-status.is-loading{color:#1766c5;}
+.consulta-socio-status.is-success{border-left-color:#1766c5;background:#eef5ff;color:#0b3e7a;}
+.consulta-socio-status.is-error{border-left-color:#b52b36;background:#fff2f3;color:#8a1d28;}
