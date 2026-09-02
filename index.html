@@ -845,6 +845,9 @@
   }
 
   viewport.addEventListener('pointerdown', e => {
+    // Si el click empieza sobre un sponsor, dejar que el <a> funcione normalmente.
+    if (e.target.closest('.sponsor-link')) return;
+
     dragging = true; moved = false; activePointer = e.pointerId;
     startX = e.clientX; startPos = x;
     viewport.classList.add('is-dragging');
@@ -869,8 +872,27 @@
   viewport.addEventListener('pointercancel', finish);
 
   viewport.addEventListener('click', e => {
-    if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+    if (moved) {
+      e.preventDefault();
+      e.stopPropagation();
+      moved = false;
+    }
   }, true);
+
+  // Refuerzo: los sponsors siempre navegan al hacer click.
+  viewport.querySelectorAll('.sponsor-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved = false;
+        return;
+      }
+      e.stopPropagation();
+      window.open(this.href, '_blank', 'noopener,noreferrer');
+      e.preventDefault();
+    });
+  });
 
   viewport.addEventListener('wheel', e => {
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
