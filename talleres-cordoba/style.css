@@ -2552,3 +2552,9 @@ body{background:#fff;overflow-x:hidden;}
 .consulta-socio-status.is-loading{color:#1766c5;}
 .consulta-socio-status.is-success{border-left-color:#1766c5;background:#eef5ff;color:#0b3e7a;}
 .consulta-socio-status.is-error{border-left-color:#b52b36;background:#fff2f3;color:#8a1d28;}
+
+
+/* SPONSORS: los logos son enlaces y no interfieren con el arrastre del carrusel. */
+.sponsor-link{display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;user-select:none;flex:0 0 auto;}
+.sponsor-link img{cursor:pointer;}
+.sponsor-marquee.is-dragging{cursor:grabbing;}

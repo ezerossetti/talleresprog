@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Club Atlético Talleres</title>
+<!-- LIBRERÍA PRINCIPAL: Bootstrap 5.3.8 (grid, navbar, botones y componentes) -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<!-- ICONOS: Bootstrap Icons 1.13.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<!-- TIPOGRAFÍAS: Jost + Manrope desde Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="assets/images/escudo-talleres.png" rel="icon" type="image/png"/>
+</head>
+<body>
+<!-- AUDIO: sonido ambiente de cancha, controlado con JavaScript -->
+<audio id="audioCancha" loop="" preload="auto" src="assets/audio/muchachos.mp3"></audio>
+<!-- NAVEGACIÓN PRINCIPAL: menú responsive con Bootstrap -->
+<nav class="navbar navbar-club navbar-expand-lg fixed-top" id="mainNavbar">
+<div class="container-fluid navbar-inner">
+<a aria-label="Talleres - inicio" class="navbar-brand brand-talleres" href="#section-portada">
+<span class="brand-crest-wrap"><img alt="Escudo de Talleres" class="escudo-nav" src="assets/images/escudo-talleres.png"/></span>
+<span class="brand-copy"><strong>TALLERES</strong><small>CÓRDOBA · 1913</small></span>
+</a>
+<div class="nav-center collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav mx-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="#section-identidad"><span>01</span> Historia</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-plantel"><span>02</span> Plantel</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-noticias"><span>03</span> Noticias</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-logros"><span>04</span> Palmarés</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-resultados"><span>05</span> Partidos</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-tienda"><span>06</span> Tienda</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-socios"><span>07</span> Socios</a></li>
+</ul>
+</div>
+<div class="nav-actions">
+<button aria-label="Activar o silenciar sonido" class="sonido-toggle" id="btnSonido" title="Activar/silenciar sonido" type="button">
+<i class="bi bi-volume-mute-fill"></i>
+</button>
+<a class="nav-member" href="#section-socios"><span>HACETE SOCIO</span><i class="bi bi-arrow-up-right"></i></a>
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
+<span></span><span></span>
+</button>
+</div>
+</div>
+</nav>
+<!-- PORTADA / HERO: video de fondo, título, botones, escudo y datos del club -->
+<section class="hero-talleres" id="section-portada">
+<video aria-hidden="true" autoplay="" class="hero-video" loop="" muted="" playsinline="" poster="assets/images/hero-poster.jpg">
+<source src="assets/video/hero-talleres.mp4" type="video/mp4"/>
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-grid"></div>
+<div class="container hero-content">
+<div class="row align-items-end g-4">
+<div class="col-12 col-xl-8">
+<div class="hero-kicker">
+<span class="hero-line"></span>
+<span>CLUB ATLÉTICO TALLERES · CÓRDOBA · 1913</span>
+</div>
+<h1 class="hero-title">
+<span>LA T</span>
+<strong>DE CÓRDOBA</strong>
+</h1>
+<p class="hero-copy">
+          Más de un siglo de historia, identidad albiazul y una institución que crece con Córdoba.
+          Conocé el club, su historia, sus logros y el plantel.
+        </p>
+<div class="hero-actions">
+<a class="btn btn-hero-primary" href="#section-plantel">
+            Ver plantel <i class="bi bi-arrow-up-right"></i>
+</a>
+<a class="btn btn-hero-ghost" href="https://formit.clubtalleres.com.ar/altasociosnuevos/" rel="noopener" target="_blank">
+            Hacete socio <i class="bi bi-person-plus"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-xl-4">
+<div class="hero-club-card">
+<div class="club-card-top">
+<span>IDENTIDAD ALBIAZUL</span>
+<span class="club-card-dot"></span>
+</div>
+<div class="club-card-crest">
+<img alt="Escudo del Club Atlético Talleres" src="assets/images/escudo-talleres.png"/>
+</div>
+<div class="club-card-bottom">
+<div>
+<small>FUNDADO</small>
+<strong>12 OCT 1913</strong>
+</div>
+<div class="club-card-divider"></div>
+<div>
+<small>ESTADIO</small>
+<strong>MARIO A. KEMPES</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-stats row g-2 g-md-3">
+<div class="col-6 col-md-3">
+<div class="hero-stat">
+<span class="hero-stat-number">1913</span>
+<span class="hero-stat-label">Fundación del club</span>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="hero-stat">
+<span class="hero-stat-number">57K</span>
+<span class="hero-stat-label">Capacidad del Kempes</span>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="hero-stat">
+<span class="hero-stat-number">1999</span>
+<span class="hero-stat-label">Campeón internacional</span>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="hero-stat hero-stat-last">
+<span class="hero-stat-number">100+</span>
+<span class="hero-stat-label">Años de historia</span>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Bajar a la historia" class="hero-scroll" href="#section-identidad">
+<span>DESCUBRÍ LA HISTORIA</span>
+<i class="bi bi-arrow-down"></i>
+</a>
+</section>
+<!-- CARRUSEL DE SPONSORS: logos de marcas aliadas, desplazamiento automático y arrastre con mouse -->
+<section class="section-sponsors section-sponsors-main" id="section-sponsors">
+<div class="container-fluid px-0">
+<div class="sponsors-head">
+<div><span>ALIADOS ESTRATÉGICOS</span><small>Las marcas que acompañan al Mundo Talleres</small></div>
+<div class="sponsors-note">ARRASTRÁ PARA RECORRER · PASÁ EL CURSOR PARA VERLOS A COLOR</div>
+</div>
+<div aria-label="Sponsors y aliados de Talleres" class="sponsor-marquee" id="sponsorMarquee">
+<div class="sponsor-track" id="sponsorTrack"><a aria-label="Visitar sitio web de Le Coq Sportif" class="sponsor-link" href="https://lecoqsportif.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Le Coq Sportif" loading="lazy" src="assets/images/loecoq.png"/></a><a aria-label="Visitar sitio web de IEB+" class="sponsor-link" href="https://www.iebmas.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="IEB+" loading="lazy" src="assets/images/IEB.png"/></a><a aria-label="Visitar sitio web de Holcim" class="sponsor-link" href="https://www.holcim.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Holcim" loading="lazy" src="assets/images/holcim.png"/></a><a aria-label="Visitar sitio web de Advanta" class="sponsor-link" href="https://www.advanta.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Advanta" loading="lazy" src="assets/images/advanta.png"/></a><a aria-label="Visitar sitio web de Nobis" class="sponsor-link" href="https://www.nobis.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Nobis" loading="lazy" src="assets/images/NOBIS.png"/></a><a aria-label="Visitar sitio web de Pepsi" class="sponsor-link" href="https://www.pepsi.com/" rel="noopener noreferrer" target="_blank"><img alt="Pepsi" loading="lazy" src="assets/images/pepsipng.png"/></a><a aria-label="Visitar sitio web de Quilmes" class="sponsor-link" href="https://www.cerveceriaymalteriaquilmes.com/" rel="noopener noreferrer" target="_blank"><img alt="Quilmes" loading="lazy" src="assets/images/quilmes.png"/></a><a aria-label="Visitar sitio web de Gatorade" class="sponsor-link" href="https://www.gatorade.com/" rel="noopener noreferrer" target="_blank"><img alt="Gatorade" loading="lazy" src="assets/images/gatorade.png"/></a><a aria-label="Visitar sitio web de Grupo Quijada" class="sponsor-link" href="https://grupoquijada.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Grupo Quijada" loading="lazy" src="assets/images/grupoquijada.png"/></a><a aria-label="Visitar sitio web de Tadicor" class="sponsor-link" href="https://www.tadicor.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Tadicor" loading="lazy" src="assets/images/tadicor.png"/></a><a aria-label="Visitar sitio web de Cecotec" class="sponsor-link" href="https://cecotec.es/" rel="noopener noreferrer" target="_blank"><img alt="Cecotec" loading="lazy" src="assets/images/cecotec.png"/></a><a aria-label="Visitar sitio web de Cine Dino" class="sponsor-link" href="https://cinedino.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Cine Dino" loading="lazy" src="assets/images/cinedino.png"/></a><a aria-label="Visitar sitio web de Sierras Pack" class="sponsor-link" href="https://sierraspack.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Sierras Pack" loading="lazy" src="assets/images/sierraspack.png"/></a><a aria-label="Visitar sitio web de Cadena 3" class="sponsor-link" href="https://www.cadena3.com/" rel="noopener noreferrer" target="_blank"><img alt="Cadena 3" loading="lazy" src="assets/images/cadena3.png"/></a><a aria-label="Visitar sitio web de Córdoba" class="sponsor-link" href="https://www.cba.gov.ar/" rel="noopener noreferrer" target="_blank"><img alt="Córdoba" loading="lazy" src="assets/images/cordoba2.png"/></a><a aria-label="Visitar sitio web de Hospital" class="sponsor-link" href="https://www.hospitalprivadosa.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Hospital" loading="lazy" src="assets/images/hospital.png"/></a><a aria-label="Visitar sitio web de Dentis" class="sponsor-link" href="https://www.dentis.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Dentis" loading="lazy" src="assets/images/dentis.png"/></a><a aria-label="Visitar sitio web de Cabify" class="sponsor-link" href="https://cabify.com/ar" rel="noopener noreferrer" target="_blank"><img alt="Cabify" loading="lazy" src="assets/images/cabify.png"/></a><a aria-label="Visitar sitio web de Sony" class="sponsor-link" href="https://www.sony.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Sony" loading="lazy" src="assets/images/sony.png"/></a><a aria-label="Visitar sitio web de Urquiza" class="sponsor-link" href="https://www.urquizamotos.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Urquiza" loading="lazy" src="assets/images/urquiza.png"/></a><a aria-label="Visitar sitio web de Kazaro" class="sponsor-link" href="https://kazaro.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Kazaro" loading="lazy" src="assets/images/kazaro.png"/></a><a aria-label="Visitar sitio web de Orange" class="sponsor-link" href="https://www.orange.com/" rel="noopener noreferrer" target="_blank"><img alt="Orange" loading="lazy" src="assets/images/orange.png"/></a><a aria-label="Visitar sitio web de Vaso" class="sponsor-link" href="https://www.vaso.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Vaso" loading="lazy" src="assets/images/vaso.png"/></a><a aria-label="Visitar sitio web de Familia Parra Motos" class="sponsor-link" href="https://familiaparra.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Familia Parra Motos" loading="lazy" src="assets/images/familiaparramotos.png"/></a><a aria-label="Visitar sitio web de Limonta" class="sponsor-link" href="https://www.limonta.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Limonta" loading="lazy" src="assets/images/limonta.png"/></a><a aria-label="Visitar sitio web de Dicsys" class="sponsor-link" href="https://www.dicsys.com/" rel="noopener noreferrer" target="_blank"><img alt="Dicsys" loading="lazy" src="assets/images/dicsys.png"/></a><a aria-label="Visitar sitio web de Vial Urbano" class="sponsor-link" href="https://vialurbano.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Vial Urbano" loading="lazy" src="assets/images/vialurbano.png"/></a><a aria-label="Visitar sitio web de Vitattal" class="sponsor-link" href="https://vitattal.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Vitattal" loading="lazy" src="assets/images/vitattalpng.png"/></a><a aria-label="Visitar sitio web de Peusso" class="sponsor-link" href="https://www.peusso.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Peusso" loading="lazy" src="assets/images/peusso.png"/></a><a aria-label="Visitar sitio web de Santex" class="sponsor-link" href="https://www.santexgroup.com/" rel="noopener noreferrer" target="_blank"><img alt="Santex" loading="lazy" src="assets/images/santex.png"/></a><a aria-label="Visitar sitio web de Experto" class="sponsor-link" href="https://www.experto.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Experto" loading="lazy" src="assets/images/experto.png"/></a><a aria-label="Visitar sitio web de Goalkeeper" class="sponsor-link" href="https://goalkeeper.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Goalkeeper" loading="lazy" src="assets/images/goalkeeper.png"/></a><a aria-label="Visitar sitio web de ENA" class="sponsor-link" href="https://www.ena.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="ENA" loading="lazy" src="assets/images/ena.png"/></a><a aria-label="Visitar sitio web de DSK" class="sponsor-link" href="https://dsk.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="DSK" loading="lazy" src="assets/images/dsk.png"/></a><a aria-label="Visitar sitio web de Algabo" class="sponsor-link" href="https://www.algabo.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Algabo" loading="lazy" src="assets/images/algabo.png"/></a><a aria-label="Visitar sitio web de Carpinella" class="sponsor-link" href="https://carpinella.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Carpinella" loading="lazy" src="assets/images/carpinella.png"/></a><a aria-label="Visitar sitio web de Pazar" class="sponsor-link" href="https://pazar.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Pazar" loading="lazy" src="assets/images/pazar.png"/></a><a aria-label="Visitar sitio web de Eco de los Andes" class="sponsor-link" href="https://www.ecodelosandes.com/" rel="noopener noreferrer" target="_blank"><img alt="Eco de los Andes" loading="lazy" src="assets/images/ecodelosnades.png"/></a><a aria-label="Visitar sitio web de Egran" class="sponsor-link" href="https://www.egran.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Egran" loading="lazy" src="assets/images/egran.png"/></a><a aria-label="Visitar sitio web de Telefe" class="sponsor-link" href="https://telefe.com/" rel="noopener noreferrer" target="_blank"><img alt="Telefe" loading="lazy" src="assets/images/telefe.png"/></a><a aria-label="Visitar sitio web de La Voz" class="sponsor-link" href="https://www.lavoz.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="La Voz" loading="lazy" src="assets/images/lavoz.png"/></a><a aria-label="Visitar sitio web de Clínica de Ojos" class="sponsor-link" href="https://www.clinicadeojos.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Clínica de Ojos" loading="lazy" src="assets/images/clinicaojos.png"/></a><a aria-label="Visitar sitio web de Gráfica" class="sponsor-link" href="https://www.grafica.com.ar/" rel="noopener noreferrer" target="_blank"><img alt="Gráfica" loading="lazy" src="assets/images/grafica.png"/></a><a aria-label="Visitar sitio web de Córdoba" class="sponsor-link" href="https://www.cba.gov.ar/" rel="noopener noreferrer" target="_blank"><img alt="Córdoba" loading="lazy" src="assets/images/cordoba.png"/></a></div>
+</div>
+</div>
+</section>
+<!-- Historia / identidad -->
+<section class="club-section section-identidad" id="section-identidad">
+<div class="container">
+<div class="history-grid">
+<div class="history-copy">
+<span class="section-kicker">Nuestra historia</span>
+<h2>Más de un siglo de<br/><em>identidad albiazul</em></h2>
+<div aria-hidden="true" class="diagonal-mark"></div>
+<p>Los colores están definidos en el Estatuto del Club: azul y blanco, en bastones intercalados. El escudo refleja esa misma identidad, con las siglas C.A.T. como símbolo de tradición, esfuerzo y espíritu albiazul.</p>
+<div class="history-facts">
+<div><strong>12 OCT</strong><span>1913 · Fundación</span></div>
+<div><strong>LA BOUTIQUE</strong><span>Casa de la mística albiazul</span></div>
+<div><strong>LA DOCTA</strong><span>Una pasión que cruza Córdoba</span></div>
+</div>
+<a class="club-link" href="https://www.clubtalleres.com.ar/111-anos-de-mistica-albiazul/" rel="noopener" target="_blank">CONOCÉ NUESTRA HISTORIA <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="history-visual">
+<div class="history-frame"><img alt="Talleres y su hinchada" src="assets/images/hero-poster.jpg"/></div>
+<div class="history-stamp">CAT<br/><span>1913</span></div>
+<div class="history-caption">CLUB ATLÉTICO TALLERES · CÓRDOBA</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logros -->
+<section class="club-section section-logros" id="section-logros">
+<div class="container">
+<div class="section-heading split-heading">
+<div><span class="section-kicker">Palmarés</span><h2>Nuestra gloria</h2></div>
+<a class="club-link" href="https://www.clubtalleres.com.ar/talleres-una-historia-de-titulos-y-el-sueno-de-todos/" rel="noopener" target="_blank">VER PALMARÉS COMPLETO <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="palmares-grid">
+<article class="palmares-card"><div class="palmares-icon"><img alt="Copa CONMEBOL 1999" src="assets/images/copa-conmebol-1999.png"/></div><div><strong>1999</strong><h3>Copa CONMEBOL</h3><p>Primer título internacional del club.</p></div></article>
+<article class="palmares-card"><div class="palmares-icon"><img alt="Campeonato Nacional B 2016" src="assets/images/copa-nacional-b-2016.png"/></div><div><strong>2016</strong><h3>Primera B Nacional</h3><p>Campeón invicto y regreso a Primera División.</p></div></article>
+<article class="palmares-card"><div class="palmares-icon"><img alt="Supercopa Internacional 2025" src="assets/images/copa-supercopa-2025.png"/></div><div><strong>2025</strong><h3>Supercopa Internacional</h3><p>Campeón ante River Plate por penales.</p></div></article>
+</div>
+</div>
+</section>
+<!-- Plantel profesional -->
+<section class="club-section section-plantel-pro" id="section-plantel">
+<div class="container">
+<div class="plantel-pro-head">
+<div>
+<span class="section-kicker">Plantel profesional</span>
+<h2>La T.<br/><em>En primera.</em></h2>
+</div>
+<div class="plantel-pro-intro">
+<span class="plantel-index">02 / 2026</span>
+<p>Conocé al Plantel Superior de Talleres. Jugadores, dorsales y posiciones en una experiencia pensada como las grandes webs de fútbol.</p>
+</div>
+</div>
+<div aria-label="Plantel profesional completo" class="plantel-spotlight">
+<div class="carousel slide plantel-all-carousel" data-bs-interval="7000" id="plantelSpotlight">
+<div class="carousel-inner" id="plantelSpotlightInner"></div>
+<div class="spotlight-controls">
+<button aria-label="Jugador anterior" class="spotlight-control" data-bs-slide="prev" data-bs-target="#plantelSpotlight" type="button"><i class="bi bi-arrow-left"></i></button>
+<div class="spotlight-counter"><span id="spotlightCurrent">01</span> / <span id="spotlightTotal">28</span></div>
+<button aria-label="Siguiente jugador" class="spotlight-control" data-bs-slide="next" data-bs-target="#plantelSpotlight" type="button"><i class="bi bi-arrow-right"></i></button>
+</div>
+</div>
+</div>
+<div class="roster-toolbar">
+<div>
+<span class="toolbar-label">NÓMINA COMPLETA</span>
+<h3>Elegí una posición</h3>
+</div>
+<div aria-label="Filtrar plantel por posición" class="roster-filters" role="tablist">
+<button class="roster-filter active" data-filtro="todos">Todos</button>
+<button class="roster-filter" data-filtro="arquero">Arqueros</button>
+<button class="roster-filter" data-filtro="defensor">Defensores</button>
+<button class="roster-filter" data-filtro="mediocampista">Mediocampistas</button>
+<button class="roster-filter" data-filtro="delantero">Delanteros</button>
+</div>
+</div>
+<div class="roster-grid" id="rosterGrid"><article class="roster-card" data-posicion="arquero">
+<div class="roster-photo"><img alt="Ezequiel Unsain" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/01-7-681x1024.png"/><span class="roster-dorsal">32</span><span class="roster-pos">Arquero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Ezequiel Unsain</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="arquero">
+<div class="roster-photo"><img alt="Franco Yennerich" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/09/costado-31-681x1024.png"/><span class="roster-dorsal">40</span><span class="roster-pos">Arquero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Franco Yennerich</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="arquero">
+<div class="roster-photo"><img alt="Santino Barbi" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/03/frente-1-681x1024.png"/><span class="roster-dorsal">12</span><span class="roster-pos">Arquero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Santino Barbi</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="arquero">
+<div class="roster-photo"><img alt="Jeremías Florentín" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/02/frente-1-681x1024.png"/><span class="roster-dorsal">35</span><span class="roster-pos">Arquero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Jeremías Florentín</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Gonzalo Nuccio" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/02-7-681x1024.png"/><span class="roster-dorsal">39</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Gonzalo Nuccio</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Lautaro Ortiz" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/02-5-681x1024.png"/><span class="roster-dorsal">25</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Lautaro Ortiz</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Thiago Baroni" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/02-3-681x1024.png"/><span class="roster-dorsal">13</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Thiago Baroni</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Valentín Fascendini" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/01-4-681x1024.png"/><span class="roster-dorsal">06</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Valentín Fascendini</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Román Riquelme" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/02-681x1024.png"/><span class="roster-dorsal">03</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Román Riquelme</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Alexandro Maidana" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frente-1-681x1024.png"/><span class="roster-dorsal">28</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Alexandro Maidana</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Alex Vigo" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frente-681x1024.png"/><span class="roster-dorsal">23</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Alex Vigo</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Gabriel Báez" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/08/frente-681x1024.png"/><span class="roster-dorsal">44</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Gabriel Báez</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Santiago Fernández" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/03/frente-681x1024.png"/><span class="roster-dorsal">20</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Santiago Fernández</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Augusto Schott" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/02/frente-681x1024.png"/><span class="roster-dorsal">31</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Augusto Schott</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Bruno Trey" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/01-6-681x1024.png"/><span class="roster-dorsal">08</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Bruno Trey</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="defensor">
+<div class="roster-photo"><img alt="Federico Fattori Mouzo" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/07/01-2-681x1024.png"/><span class="roster-dorsal">13</span><span class="roster-pos">Defensor</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Federico Fattori Mouzo</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Juan Sforza" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frenteeee-681x1024.png"/><span class="roster-dorsal">18</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Juan Sforza</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Franco Cristaldo" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frentuki-681x1024.png"/><span class="roster-dorsal">26</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Franco Cristaldo</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Mateo Cáceres" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/08/frente-1-681x1024.png"/><span class="roster-dorsal">10</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Mateo Cáceres</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Giovanni Baroni" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/07/frente-681x1024.png"/><span class="roster-dorsal">05</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Giovanni Baroni</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Matías Galarza" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/02/costadojajaaj-681x1024.png"/><span class="roster-dorsal">21</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Matías Galarza</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="mediocampista">
+<div class="roster-photo"><img alt="Matías Gómez" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2023/09/frente-681x1024.png"/><span class="roster-dorsal">77</span><span class="roster-pos">Mediocampista</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Matías Gómez</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Ronaldo Martínez" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frenteeeee-1-681x1024.png"/><span class="roster-dorsal">07</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Ronaldo Martínez</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Diego Valoyes" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frente-4-681x1024.png"/><span class="roster-dorsal">99</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Diego Valoyes</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Bruno Barticciotto" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2026/03/frente-2-681x1024.png"/><span class="roster-dorsal">49</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Bruno Barticciotto</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Valentín Dávila" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/09/frente-33-681x1024.png"/><span class="roster-dorsal">37</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Valentín Dávila</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Rick Lima Morais" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2025/02/frenteeeeeee-681x1024.png"/><span class="roster-dorsal">11</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Rick Lima Morais</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article><article class="roster-card" data-posicion="delantero">
+<div class="roster-photo"><img alt="Valentín Depietri" loading="lazy" src="https://www.clubtalleres.com.ar/wp-content/uploads/2023/02/frenteeee-681x1024.png"/><span class="roster-dorsal">—</span><span class="roster-pos">Delantero</span></div>
+<div class="roster-info"><div><small>PLANTEL SUPERIOR</small><h3>Valentín Depietri</h3></div><span class="roster-arrow"><i class="bi bi-arrow-up-right"></i></span></div>
+</article></div>
+<div class="roster-foot"><span>28 JUGADORES · PLANTEL SUPERIOR</span><a href="https://www.clubtalleres.com.ar/" rel="noopener" target="_blank">VER INFORMACIÓN OFICIAL <i class="bi bi-arrow-up-right"></i></a></div>
+</div>
+</section>
+<!-- NOTICIAS: -->
+<section class="club-section section-noticias" id="section-noticias">
+<div class="container">
+<div class="news-head">
+<div>
+<span class="section-kicker">Actualidad albiazul</span>
+<h2>Lo último<br/><em>de la T.</em></h2>
+</div>
+<div class="news-head-copy">
+<p>Noticias del Club, fútbol profesional, formación y vida institucional. Una selección de la actualidad publicada por Talleres.</p>
+<a class="club-link" href="https://www.clubtalleres.com.ar/noticias-1/19/" rel="noopener" target="_blank">VER TODAS LAS NOTICIAS <i class="bi bi-arrow-up-right"></i></a>
+</div>
+</div>
+<div class="news-grid">
+<article class="news-card news-feature">
+<a class="news-image" href="https://www.clubtalleres.com.ar/inicia-un-nuevo-ciclo-albiazul-trabajo-y-preparacion-para-el-segundo-semestre-del-2026/" rel="noopener" target="_blank">
+<img alt="Entrenamiento de Talleres en el CARD" loading="lazy" src="assets/images/news-entrenamiento.jpg"/>
+<span class="news-tag">PLANTEL PROFESIONAL</span>
+</a>
+<div class="news-body">
+<small>JUNIO 2026 · CLUB TALLERES</small>
+<h3>Inicia una nueva etapa Albiazul con trabajo y preparación</h3>
+<p>El Plantel Superior continúa su preparación en el Centro de Alto Rendimiento Deportivo Amadeo Nuccetelli.</p>
+<a href="https://www.clubtalleres.com.ar/inicia-un-nuevo-ciclo-albiazul-trabajo-y-preparacion-para-el-segundo-semestre-del-2026/" rel="noopener" target="_blank">LEER NOTA <i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+<div class="news-side">
+<article class="news-card news-compact">
+<a class="news-image" href="https://www.clubtalleres.com.ar/liderazgo-y-experiencia-internacional-para-el-arco-albiazul/" rel="noopener" target="_blank"><img alt="Ezequiel Unsain, nuevo arquero de Talleres" loading="lazy" src="assets/images/escudo-talleres.png"/><span class="news-tag">REFUERZO</span></a>
+<div class="news-body"><small>26 JUN 2026</small><h3>Liderazgo y experiencia internacional para el arco albiazul</h3><a href="https://www.clubtalleres.com.ar/liderazgo-y-experiencia-internacional-para-el-arco-albiazul/" rel="noopener" target="_blank">VER NOTA <i class="bi bi-arrow-up-right"></i></a></div>
+</article>
+<article class="news-card news-compact">
+<a class="news-image" href="https://www.clubtalleres.com.ar/diego-valoyes-vuelve-a-ser-albiazul/" rel="noopener" target="_blank"><img alt="Diego Valoyes con la camiseta de Talleres" loading="lazy" src="assets/images/news-valoyes.jpg"/><span class="news-tag">PLANTEL</span></a>
+<div class="news-body"><small>19 ENE 2026</small><h3>Diego Valoyes vuelve a ser Albiazul</h3><a href="https://www.clubtalleres.com.ar/diego-valoyes-vuelve-a-ser-albiazul/" rel="noopener" target="_blank">VER NOTA <i class="bi bi-arrow-up-right"></i></a></div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMACIÓN: cantera, juveniles e infraestructura deportiva -->
+<section class="club-section section-formacion" id="section-formacion">
+<div class="container">
+<div class="formacion-head">
+<div>
+<span class="section-kicker">Mundo Talleres</span>
+<h2>Una cantera que<br/><em>forma identidad.</em></h2>
+</div>
+<div class="formacion-intro">
+<span>FORMACIÓN · INFRAESTRUCTURA · PROYECCIÓN</span>
+<p>
+          El modelo Talleres combina alto rendimiento, formación de juveniles
+          y proyección internacional. El CARD Amadeo Nuccetelli es una pieza
+          central de ese recorrido.
+        </p>
+<a class="club-link formacion-link" href="https://www.clubtalleres.com.ar/" rel="noopener" target="_blank">
+          CONOCÉ EL MUNDO TALLERES
+          <i class="bi bi-arrow-up-right"></i>
+</a>
+</div>
+</div>
+<div class="formacion-grid formacion-grid-photo">
+<!-- CARD 01 - CARD -->
+<a class="formacion-card formacion-card-photo formacion-card-featured" href="https://www.clubtalleres.com.ar/centro-de-alto-rendimiento-deportivo-amadeo-nuccetelli-2/" rel="noopener" target="_blank">
+<img alt="Entrenamiento de Talleres en el CARD Amadeo Nuccetelli" loading="lazy" src="assets/images/card.jpg"/>
+<div class="formacion-overlay"></div>
+<div class="formacion-card-number">01</div>
+<div class="formacion-card-copy">
+<span>CENTRO DE ALTO RENDIMIENTO</span>
+<h3>CARD Amadeo<br/>Nuccetelli</h3>
+<p>
+            El espacio donde el plantel trabaja y se desarrolla
+            con una metodología de alto rendimiento.
+          </p>
+</div>
+<div class="formacion-card-footer">
+<strong>CARD</strong>
+<i class="bi bi-arrow-up-right"></i>
+</div>
+</a>
+<!-- CARD 02 - JUVENILES -->
+<a class="formacion-card formacion-card-photo" href="https://www.clubtalleres.com.ar/category/juveniles/" rel="noopener" target="_blank">
+<img alt="Juveniles de Talleres" loading="lazy" src="assets/images/juveniles.jpg"/>
+<div class="formacion-overlay"></div>
+<div class="formacion-card-number">02</div>
+<div class="formacion-card-copy">
+<span>ESCUELAS Y JUVENILES</span>
+<h3>El camino<br/>hacia Primera</h3>
+<p>
+            Formación deportiva, valores y pertenencia
+            desde las etapas iniciales.
+          </p>
+</div>
+<div class="formacion-card-footer">
+<strong>JUVENILES</strong>
+<i class="bi bi-arrow-up-right"></i>
+</div>
+</a>
+<!-- CARD 03 - PROYECCIÓN INTERNACIONAL -->
+<a class="formacion-card formacion-card-photo" href="https://www.clubtalleres.com.ar/talleres-presente-en-el-programa-fifa-de-gestion-de-clubes/" rel="noopener" target="_blank">
+<img alt="Talleres en el programa FIFA de gestión de clubes" loading="lazy" src="assets/images/fifa.jpg"/>
+<div class="formacion-overlay"></div>
+<div class="formacion-card-number">03</div>
+<div class="formacion-card-copy">
+<span>PROYECCIÓN</span>
+<h3>Talleres<br/>hacia el mundo</h3>
+<p>
+            Una institución que forma jugadores y busca
+            competir cada vez más lejos.
+          </p>
+</div>
+<div class="formacion-card-footer">
+<strong>PROYECCIÓN</strong>
+<i class="bi bi-arrow-up-right"></i>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- RESULTADOS: último partido, historial reciente y próximo encuentro -->
+<section class="club-section section-resultados resultados-premium" id="section-resultados">
+<div class="container">
+<div class="results-topline">
+<div>
+<span class="section-kicker">Plantel Superior · Torneo Clausura 2026</span>
+<h2>Últimos resultados</h2>
+</div>
+<a class="club-link light" href="https://www.clubtalleres.com.ar/resumen-partido/" rel="noopener" target="_blank">VER TODOS LOS PARTIDOS <i class="bi bi-arrow-up-right"></i></a>
+</div>
+<div class="results-feature">
+<div class="results-feature-copy">
+<span class="result-eyebrow">ÚLTIMO PARTIDO</span>
+<h3>Una nueva batalla,<br/><em>la misma T.</em></h3>
+<p>El Matador visitó a Gimnasia de Mendoza por la Fecha 5 del Torneo Clausura Mercado Libre 2026.</p>
+<a class="result-action" href="https://www.clubtalleres.com.ar/" rel="noopener" target="_blank">VER CRÓNICA <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="result-main-score">
+<div class="result-team"><img alt="Talleres" src="assets/images/escudo-talleres.png"/><span>TALLERES</span></div>
+<div class="score-block"><small>17 AGO · FECHA 5</small><strong>1 <b>—</b> 3</strong><span>FINALIZADO</span></div>
+<div class="result-team"><img alt="Gimnasia de Mendoza" src="https://images.fotmob.com/image_resources/logo/teamlogo/568727.png"/><span>GIMNASIA MZA.</span></div>
+</div>
+</div>
+<div class="results-history-head"><span>FORMA RECIENTE</span><div class="form-dots"><i class="loss-dot">D</i><i class="loss-dot">D</i><i class="win-dot">V</i><i class="loss-dot">D</i></div></div>
+<div class="results-history">
+<article class="result-mini"><div class="result-mini-meta"><span>FECHA 4</span><small>11 AGO 2026</small></div><div class="mini-teams"><span>TALLERES</span><strong>0 — 3</strong><span>LANÚS</span></div><div class="mini-badges"><img alt="Talleres" src="assets/images/escudo-talleres.png"/><img alt="Lanús" src="https://images.fotmob.com/image_resources/logo/teamlogo/10082.png"/></div><span class="mini-status loss">DERROTA</span></article>
+<article class="result-mini"><div class="result-mini-meta"><span>FECHA 3</span><small>03 AGO 2026</small></div><div class="mini-teams"><span>PLATENSE</span><strong>0 — 4</strong><span>TALLERES</span></div><div class="mini-badges"><img alt="Platense" src="https://images.fotmob.com/image_resources/logo/teamlogo/10089.png"/><img alt="Talleres" src="assets/images/escudo-talleres.png"/></div><span class="mini-status win">VICTORIA</span></article>
+<article class="result-mini"><div class="result-mini-meta"><span>FECHA 2</span><small>30 JUL 2026</small></div><div class="mini-teams"><span>TALLERES</span><strong>1 — 3</strong><span>VÉLEZ</span></div><div class="mini-badges"><img alt="Talleres" src="assets/images/escudo-talleres.png"/><img alt="Vélez Sarsfield" src="https://images.fotmob.com/image_resources/logo/teamlogo/10079.png"/></div><span class="mini-status loss">DERROTA</span></article>
+<article class="result-mini"><div class="result-mini-meta"><span>FECHA 1</span><small>25 JUL 2026</small></div><div class="mini-teams"><span>RACING</span><strong>1 — 0</strong><span>TALLERES</span></div><div class="mini-badges"><img alt="Newell's Old Boys" src="https://images.fotmob.com/image_resources/logo/teamlogo/10080.png"/><img alt="Talleres" src="assets/images/escudo-talleres.png"/></div><span class="mini-status loss">DERROTA</span></article>
+</div>
+<div class="next-match-banner">
+<div><span class="section-kicker">PRÓXIMO PARTIDO</span><h3>Talleres <em>vs.</em> Rosario Central</h3><p>Lunes 24 de agosto · 21:15 hs · Estadio Mario Alberto Kempes</p></div>
+<div class="next-match-badges"><img alt="Talleres" src="assets/images/escudo-talleres.png"/><span>VS</span><img alt="Rosario Central" src="https://images.fotmob.com/image_resources/logo/teamlogo/10084.png"/></div>
+<a class="result-action" href="https://www.clubtalleres.com.ar/" rel="noopener" target="_blank">VER DETALLES <i class="bi bi-arrow-right"></i></a>
+</div>
+</div>
+</section>
+<!-- TIENDA / MERCHANDISING: camisetas y productos destacados -->
+<section class="club-section section-tienda tienda-premium" id="section-tienda">
+<div class="container">
+<div class="shop-hero">
+<div class="shop-hero-copy">
+<span class="section-kicker">TIENDA OFICIAL · TEMPORADA 2026</span>
+<h2>Vestí la camiseta.<br/><em>Viví Talleres.</em></h2>
+<p>La colección oficial 2026 reúne las nuevas equipaciones, indumentaria de entrenamiento y prendas de salida de Le Coq Sportif.</p>
+<div class="shop-hero-actions">
+<a class="shop-button" href="https://tienda.clubtalleres.com.ar/categoria/temporada-2026/" rel="noopener" target="_blank">VER COLECCIÓN 2026 <i class="bi bi-arrow-up-right"></i></a>
+<span class="shop-note"><i class="bi bi-truck"></i> Envíos a todo el país</span>
+</div>
+</div>
+<div class="shop-team-photo">
+<img alt="Tres integrantes de nuestro proyecto con la nueva camiseta de Talleres" loading="lazy" src="assets/images/equipo-tres-2026.png"/>
+<div class="shop-photo-caption"><span>ALBIAZULES</span><strong>Una pasión. Tres miradas. Un mismo Talleres.</strong></div>
+</div>
+</div>
+<div class="shop-section-head">
+<div><span class="section-kicker">SELECCIÓN DESTACADA</span><h3>Lo nuevo de la tienda</h3></div>
+<p>Productos publicados actualmente en la Tienda Oficial Talleres. Los precios mostrados corresponden a la consulta realizada el 24/08/2026.</p>
+</div>
+<div class="shirt-grid">
+<article class="shirt-feature shirt-blue">
+<div class="shirt-copy"><span>01 · EQUIPACIÓN</span><h3>Camiseta<br/><strong>Titular Pro 2026</strong></h3><p>LE COQ SPORTIF</p><b>$149.900</b><a href="https://tienda.clubtalleres.com.ar/producto/camiseta-talleres-titular-pro-2026-le-coq-sportif/" rel="noopener" target="_blank">COMPRAR <i class="bi bi-arrow-up-right"></i></a></div>
+<div class="shirt-image"><img alt="Camiseta Talleres Titular Pro 2026" src="assets/images/tienda/camiseta-titular-pro-2026.jpg"/></div>
+</article>
+<article class="shirt-feature shirt-light">
+<div class="shirt-copy"><span>02 · EQUIPACIÓN</span><h3>Camiseta<br/><strong>Suplente Pro 2026</strong></h3><p>LE COQ SPORTIF</p><b>$149.900</b><a href="https://tienda.clubtalleres.com.ar/producto/camiseta-talleres-alternativa-pro-2026-le-coq-sportif/" rel="noopener" target="_blank">COMPRAR <i class="bi bi-arrow-up-right"></i></a></div>
+<div class="shirt-image"><img alt="Camiseta Talleres Suplente Pro 2026" src="https://www.stockcenter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw0f650cb7/products/LELTN0226022/LELTN0226022-1.JPG"/></div>
+</article>
+</div>
+<div class="product-grid">
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Rompeviento 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/rompeviento-2026.webp"/></div>
+<div class="product-info"><span>03 · ENTRENAMIENTO</span><h4>Rompeviento 2026</h4><p>LE COQ SPORTIF</p><div><b>$139.900</b><a href="https://tienda.clubtalleres.com.ar/producto/rompeviento-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Buzo Entrenamiento 2 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/buzo-entrenamiento-2-2026.webp"/></div>
+<div class="product-info"><span>04 · ENTRENAMIENTO</span><h4>Buzo Entrenamiento 2 2026</h4><p>LE COQ SPORTIF</p><div><b>$129.900</b><a href="https://tienda.clubtalleres.com.ar/producto/buzo-entrenamiento-2-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Buzo Entrenamiento 1 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/buzo-entrenamiento-1-2026.jpg"/></div>
+<div class="product-info"><span>05 · ENTRENAMIENTO</span><h4>Buzo Entrenamiento 1 2026</h4><p>LE COQ SPORTIF</p><div><b>$129.900</b><a href="https://tienda.clubtalleres.com.ar/producto/buzo-entrenamiento-1-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Campera Salida 2 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/campera-salida-2-2026.jpg"/></div>
+<div class="product-info"><span>06 · SALIDA</span><h4>Campera Salida 2 2026</h4><p>LE COQ SPORTIF</p><div><b>$145.900</b><a href="https://tienda.clubtalleres.com.ar/producto/campera-salida-2-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Buzo Salida 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/buzo-salida-2026.jpg"/></div>
+<div class="product-info"><span>07 · SALIDA</span><h4>Buzo Salida 2026</h4><p>LE COQ SPORTIF</p><div><b>$124.900</b><a href="https://tienda.clubtalleres.com.ar/producto/buzo-salida-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+<article class="product-tile product-photo-tile">
+<div class="product-photo"><img alt="Remera Salida 2026 - Tienda Oficial Talleres" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('image-fallback');" src="assets/images/tienda/remera-salida-2026.jpg"/></div>
+<div class="product-info"><span>08 · SALIDA</span><h4>Remera Salida 2026</h4><p>LE COQ SPORTIF</p><div><b>$79.900</b><a href="https://tienda.clubtalleres.com.ar/producto/remera-salida-2026-le-coq-sportif/" rel="noopener" target="_blank">VER <i class="bi bi-arrow-up-right"></i></a></div></div>
+</article>
+</div>
+<div class="shop-bottom">
+<div><span>COLECCIÓN OFICIAL</span><strong>EQUIPACIONES · ENTRENAMIENTO · SALIDA · ACCESORIOS</strong></div>
+<a class="shop-button" href="https://tienda.clubtalleres.com.ar/" rel="noopener" target="_blank">ENTRAR A LA TIENDA <i class="bi bi-arrow-right"></i></a>
+</div>
+</div>
+</section>
+<!-- Socios -->
+<section class="socios-final" id="section-socios">
+<div class="container socios-final-inner">
+<!-- HERO SOCIOS · PIEZA COMPLETA -->
+<div class="socios-final-hero socios-final-hero-full">
+<a aria-label="Asociate al Club Atlético Talleres" class="socios-final-creative" href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">
+<img alt="Cuando vos te sumás, Talleres es mucho más. Asociate acá." src="assets/images/asociate-talleres-2026.png"/>
+</a>
+</div>
+<!-- BENEFICIOS -->
+<div class="socios-final-benefits">
+<div class="socios-final-benefit-intro">
+<span>¿POR QUÉ SER SOCIO?</span>
+<h3>Mucho más<br/>que una cuota.</h3>
+</div>
+<div class="socios-final-benefit-grid">
+<div><i class="bi bi-ticket-perforated"></i><b>PARTIDOS</b><small>Ingresá a los partidos según tu categoría y las condiciones vigentes.</small></div>
+<div><i class="bi bi-bag"></i><b>DESCUENTOS</b><small>Accedé a beneficios en tiendas oficiales y comercios adheridos.</small></div>
+<div><i class="bi bi-stars"></i><b>GOLAZO</b><small>Sumá puntos y disfrutá experiencias y beneficios exclusivos.</small></div>
+<div><i class="bi bi-percent"></i><b>AHORRAT</b><small>Encontrá promociones para disfrutar todos los días.</small></div>
+</div>
+</div>
+<!-- CARNETS / CARRUSEL -->
+<div class="socios-final-carnets">
+<div class="socios-final-section-title">
+<span>IDENTIDAD ALBIAZUL</span>
+<h3>Una categoría.<br/><strong>Una historia.</strong></h3>
+<p>Conocé algunas de las identidades que forman parte de la familia albiazul.</p>
+</div>
+<div class="carousel slide socios-carnet-carousel" data-bs-ride="false" id="sociosCarnetsCarousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="socios-carnet-slide">
+<div class="socios-carnet-visual"><img alt="Carnet Socio Menor" src="assets/images/carnet-menor.webp"/></div>
+<div class="socios-carnet-info"><span>01 / 05</span><h4>SOCIO<br/><strong>MENOR</strong></h4><p>Una forma de crecer acompañando al Club desde los primeros años.</p><a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">CONOCER OPCIONES <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="socios-carnet-slide">
+<div class="socios-carnet-visual"><img alt="Carnet Socio Albiazul" src="assets/images/carnet-albiazul.webp"/></div>
+<div class="socios-carnet-info"><span>02 / 05</span><h4>SOCIO<br/><strong>ALBIAZUL</strong></h4><p>La identidad que llevás con vos dentro y fuera de la cancha.</p><a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">CONOCER OPCIONES <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="socios-carnet-slide">
+<div class="socios-carnet-visual"><img alt="Carnet Socio 1913" src="assets/images/carnet-1913.webp"/></div>
+<div class="socios-carnet-info"><span>03 / 05</span><h4>SOCIO<br/><strong>1913</strong></h4><p>Una referencia a la historia que construimos desde el nacimiento del Club.</p><a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">CONOCER OPCIONES <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="socios-carnet-slide">
+<div class="socios-carnet-visual"><img alt="Carnet Socio CAT" src="assets/images/carnet-cat.webp"/></div>
+<div class="socios-carnet-info"><span>04 / 05</span><h4>SOCIO<br/><strong>CAT</strong></h4><p>Una manera de seguir formando parte de la vida institucional del Club.</p><a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">CONOCER OPCIONES <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="socios-carnet-slide">
+<div class="socios-carnet-visual socios-carnet-juvenil"><img alt="Carnet Socio Juvenil" src="assets/images/CARNET-SOCIO-T.webp"/></div>
+<div class="socios-carnet-info"><span>05 / 05</span><h4>SOCIO<br/><strong>T</strong></h4><p>Tu lazo directo con el Club para alentar y apoyar desde donde estés.</p><a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">CONOCER OPCIONES <i class="bi bi-arrow-right"></i></a></div>
+</div>
+</div>
+</div>
+<button aria-label="Anterior" class="carousel-control-prev socios-carnet-control" data-bs-slide="prev" data-bs-target="#sociosCarnetsCarousel" type="button"><span class="carousel-control-prev-icon"></span></button>
+<button aria-label="Siguiente" class="carousel-control-next socios-carnet-control" data-bs-slide="next" data-bs-target="#sociosCarnetsCarousel" type="button"><span class="carousel-control-next-icon"></span></button>
+<div class="socios-carnet-indicators">
+<button aria-label="Menor" class="active" data-bs-slide-to="0" data-bs-target="#sociosCarnetsCarousel" type="button"></button>
+<button aria-label="Albiazul" data-bs-slide-to="1" data-bs-target="#sociosCarnetsCarousel" type="button"></button>
+<button aria-label="1913" data-bs-slide-to="2" data-bs-target="#sociosCarnetsCarousel" type="button"></button>
+<button aria-label="CAT" data-bs-slide-to="3" data-bs-target="#sociosCarnetsCarousel" type="button"></button>
+<button aria-label="Juvenil" data-bs-slide-to="4" data-bs-target="#sociosCarnetsCarousel" type="button"></button>
+</div>
+</div>
+</div>
+<!-- UBICACIONES EN EL ESTADIO -->
+<div class="socios-estadio" id="socios-estadio">
+<div class="socios-estadio-heading">
+<span>UBICACIONES EN EL ESTADIO</span>
+<h3>Elegí tu lugar.<br/><strong>Viví el partido.</strong></h3>
+<p>Pasá el cursor por los sectores para conocer el valor de la cuota según la ubicación.</p>
+</div>
+<div class="socios-estadio-layout">
+<div class="socios-estadio-photo-wrap" id="sociosEstadioPhotoWrap">
+<img alt="Platea Ardiles - Estadio Mario Alberto Kempes" id="sociosEstadioPhoto" src="assets/images/ardiles.webp"/>
+<div aria-hidden="true" class="socios-estadio-hotspots" id="sociosEstadioHotspots">
+<span class="socios-estadio-hotspot hotspot-main" data-sector="ardiles"></span>
+</div>
+<div class="socios-estadio-photo-shade"></div>
+<div class="socios-estadio-label" id="sociosEstadioLabel">
+<span>UBICACIÓN SELECCIONADA</span>
+<strong>PLATEA ARDILES</strong>
+</div>
+<div aria-hidden="true" class="socios-estadio-prices" id="sociosEstadioPrices">
+<div class="socios-estadio-prices-head">
+<span>VALORES</span>
+<i aria-hidden="true" class="bi bi-x-lg"></i>
+</div>
+<div class="socios-estadio-price"><b>$147.970</b><span>SOCIO 1913</span></div>
+<div class="socios-estadio-price"><b>$82.160</b><span>SOCIO ALBIAZUL</span></div>
+<div class="socios-estadio-price"><b>$68.480</b><span>SOCIO CAT</span></div>
+<div class="socios-estadio-price"><b>$34.160</b><span>SOCIO JUVENILES</span></div>
+<div class="socios-estadio-price"><b>$12.560</b><span>SOCIO NIÑOS</span></div>
+</div>
+</div>
+<aside aria-label="Sectores del estadio" class="socios-estadio-sectors">
+<div class="socios-estadio-sectors-title">SECTORES</div>
+<button class="socios-estadio-sector active" data-sector="ardiles" type="button">
+<span>Platea Ardiles</span><i class="bi bi-arrow-right"></i>
+</button>
+<button class="socios-estadio-sector" data-sector="gasparini" type="button">
+<span>Platea Gasparini</span><i class="bi bi-arrow-right"></i>
+</button>
+<button class="socios-estadio-sector" data-sector="willington" type="button">
+<span>Popular Willington</span><i class="bi bi-arrow-right"></i>
+</button>
+<div class="socios-estadio-hint"><i class="bi bi-mouse2"></i><span>Pasá el cursor por un sector para ver sus valores.</span></div>
+</aside>
+</div>
+</div>
+<!-- PREGUNTAS FRECUENTES -->
+<div class="socios-final-faq">
+<div class="socios-final-faq-heading">
+<span>PREGUNTAS FRECUENTES</span>
+<h3>Lo que necesitás<br/><strong>saber.</strong></h3>
+</div>
+<div class="socios-final-faq-list">
+<details>
+<summary>¿Dónde puedo hacerme socio? <i class="bi bi-plus"></i></summary>
+<p>Podés iniciar el alta desde la plataforma oficial de Talleres y consultar las opciones disponibles para asociarte.</p>
+<a href="https://www.clubtalleres.com.ar/asociat/" rel="noopener" target="_blank">IR A ASOCIAT <i class="bi bi-arrow-up-right"></i></a>
+</details>
+<details>
+<summary>¿Cómo consulto o pago mi cuota? <i class="bi bi-plus"></i></summary>
+<p>La plataforma oficial de socios permite consultar y gestionar el pago de la cuota social.</p>
+<a href="https://socios.clubtalleres.com.ar/" rel="noopener" target="_blank">IR A SOCIOS <i class="bi bi-arrow-up-right"></i></a>
+</details>
+<details>
+<summary>¿Qué necesito para ingresar a los partidos? <i class="bi bi-plus"></i></summary>
+<p>El ingreso depende de la categoría y de las condiciones vigentes para cada partido. La cuota debe encontrarse al día y, cuando corresponda, puede ser necesario reservar la ubicación.</p>
+</details>
+<details>
+<summary>¿Dónde puedo hacer una consulta? <i class="bi bi-plus"></i></summary>
+<p>Podés comunicarte con Atención al Socio por WhatsApp o escribir a socios@clubtalleres.com.ar.</p>
+</details>
+</div>
+</div>
+<!-- FORMULARIO DE CONTACTO -->
+<div class="socios-final-form">
+<div class="socios-final-form-copy">
+<span>ESTAMOS PARA ESCUCHARTE</span>
+<h3>¿TENÉS UNA<br/><strong>CONSULTA?</strong></h3>
+<p>Dejanos tus datos y tu mensaje. Este formulario es parte de la experiencia institucional de la página.</p>
+<div class="socios-final-form-note">
+<i class="bi bi-chat-left-text"></i>
+<div><b>ATENCIÓN AL SOCIO</b><small>Completá el formulario y contanos en qué podemos ayudarte.</small></div>
+</div>
+</div>
+<form action="/api/contact" class="socios-final-form-fields" id="formConsultaSocio" method="post">
+<input aria-hidden="true" autocomplete="off" name="website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" tabindex="-1" type="text"/>
+<div class="socios-form-row">
+<div class="socios-form-group">
+<label for="nombreSocio">NOMBRE Y APELLIDO</label>
+<input id="nombreSocio" name="nombre" placeholder="Tu nombre y apellido" required="" type="text"/>
+</div>
+<div class="socios-form-group">
+<label for="emailSocio">EMAIL</label>
+<input id="emailSocio" name="email" placeholder="tu@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="socios-form-group">
+<label for="motivoSocio">MOTIVO DE LA CONSULTA</label>
+<select id="motivoSocio" name="motivo" required="">
+<option disabled="" selected="" value="">Seleccioná una opción</option>
+<option value="socios">Consulta de socios</option>
+<option value="beneficios">Beneficios y descuentos</option>
+<option value="partidos">Partidos e ingreso</option>
+<option value="otro">Otra consulta</option>
+</select>
+</div>
+<div class="socios-form-group">
+<label for="mensajeSocio">MENSAJE</label>
+<textarea id="mensajeSocio" name="mensaje" placeholder="Escribí tu consulta..." required="" rows="5"></textarea>
+</div>
+<button class="socios-final-form-button" type="submit">
+          ENVIAR CONSULTA <i class="bi bi-arrow-up-right"></i>
+</button>
+</form>
+<div aria-live="polite" class="consulta-socio-status" hidden="" id="consultaSocioStatus" role="status"></div>
+</div>
+<!-- CONTACTO -->
+<div class="socios-final-contact">
+<div><span>ATENCIÓN AL SOCIO</span><strong>351 226 8833</strong><small>WhatsApp</small></div>
+<div><span>EMAIL</span><strong>socios@clubtalleres.com.ar</strong><small>Consultas y sugerencias</small></div>
+<div><span>SEDE SOCIAL</span><strong>Rosario de Santa Fe 15</strong><small>Córdoba</small></div>
+</div>
+</div>
+</section>
+<!-- PIE DE PÁGINA: redes sociales, datos institucionales y créditos -->
+<footer class="club-footer">
+<div class="container text-center">
+<img alt="Escudo del club" src="assets/images/escudo-talleres.png" style="width:64px;"/>
+<p class="mb-0 mt-3 fw-club fs-5">Club Atlético Talleres</p>
+<p class="mb-1" style="color: rgba(255,255,255,.75);">Barrio Jardín · Córdoba, Argentina</p>
+<p class="fst-italic" style="color: rgba(255,255,255,.6);">"El mas grande de la Docta desde 1913"</p>
+<ul class="list-unstyled d-flex justify-content-center gap-3 mt-4">
+<li><a class="social-icon" href="https://www.instagram.com/tallerescbaoficial/" rel="noopener" target="_blank"><i class="bi bi-instagram fs-5"></i></a></li>
+<li><a class="social-icon" href="https://x.com/catalleresdecba?s=11" rel="noopener" target="_blank"><i class="bi bi-twitter-x fs-5"></i></a></li>
+<li><a class="social-icon" href="https://www.facebook.com/share/DN6TWGmEWJbUamYt/?mibextid=LQQJ4d" rel="noopener" target="_blank"><i class="bi bi-facebook fs-5"></i></a></li>
+<li><a class="social-icon" href="https://www.youtube.com/@talleresoficial/videos" rel="noopener" target="_blank"><i class="bi bi-youtube fs-5"></i></a></li>
+</ul>
+<hr class="my-4" style="border-color: rgba(255,255,255,.15);"/>
+<p class="mb-0 small" style="color: rgba(255,255,255,.55);">
+      Desarollado por Ezequiel Rossetti Carrasco · Paulo Lopez de Bonis · Joaquin Infante
+</p>
+</div>
+</footer>
+<!-- JAVASCRIPT DE BOOTSTRAP: activa navbar responsive y carruseles -->
+<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JAVASCRIPT: botón para activar y silenciar el audio de cancha -->
+<script>
+(function () {
+  const boton = document.getElementById('btnSonido');
+  const audio = document.getElementById('audioCancha');
+  if (!boton) return;
+  boton.setAttribute('aria-label','Control de sonido');
+  boton.addEventListener('click', function () {
+    this.classList.toggle('is-active');
+    const activo = this.classList.contains('is-active');
+    this.innerHTML = activo
+      ? '<i class="bi bi-volume-up-fill"></i>'
+      : '<i class="bi bi-volume-mute-fill"></i>';
+
+    if (audio) {
+      if (activo) {
+        audio.volume = 0.08;
+        audio.play().catch(() => {});
+      } else {
+        audio.pause();
+      }
+    }
+  });
+})();
+</script>
+<!-- Animación de aparición al hacer scroll (tarjetas de datos) -->
+<script>
+(function () {
+  const elementos = document.querySelectorAll('.reveal-scroll');
+  if (!('IntersectionObserver' in window) || !elementos.length) {
+    elementos.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+  elementos.forEach(el => observer.observe(el));
+})();
+</script>
+<!-- Plantel: filtros y spotlight -->
+<script>
+(function(){
+  const grid = document.getElementById('rosterGrid');
+  const filters = document.querySelectorAll('.roster-filter');
+  if(grid && filters.length){
+    const cards = grid.querySelectorAll('.roster-card');
+    filters.forEach(btn => btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filtro = btn.dataset.filtro;
+      cards.forEach(card => {
+        const show = filtro === 'todos' || card.dataset.posicion === filtro;
+        card.classList.toggle('is-hidden', !show);
+      });
+    }));
+  }
+  const carousel = document.getElementById('plantelSpotlight');
+  const counter = document.querySelector('.spotlight-counter span');
+  if(carousel && counter){
+    carousel.addEventListener('slid.bs.carousel', e => counter.textContent = String(e.to + 1).padStart(2,'0'));
+  }
+})();
+</script>
+<script>
+(function(){
+  // CARRUSEL DE SPONSORS: movimiento automático + arrastre manual sin bloquear los enlaces.
+  const viewport = document.getElementById('sponsorMarquee');
+  const track = document.getElementById('sponsorTrack');
+  if(!viewport || !track) return;
+
+  const original = Array.from(track.children).map(el => el.cloneNode(true));
+  original.forEach(el => track.appendChild(el));
+
+  let x = 0;
+  let last = performance.now();
+  let dragging = false;
+  let moved = false;
+  let startX = 0;
+  let startPos = 0;
+  const speed = 28;
+
+  const half = () => track.scrollWidth / 2;
+  const wrap = () => {
+    const w = half();
+    if(!w) return;
+    while(x <= -w) x += w;
+    while(x > 0) x -= w;
+  };
+  const render = () => {
+    track.style.transform = `translate3d(${x}px,0,0)`;
+  };
+
+  function loop(now){
+    const dt = (now - last) / 1000;
+    last = now;
+    if(!dragging){
+      x -= speed * dt;
+      wrap();
+      render();
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // Si empezamos sobre un sponsor, dejamos que el enlace reciba normalmente el click/doble click.
+  viewport.addEventListener('pointerdown', e => {
+    if(e.target.closest('a.sponsor-link')) return;
+    dragging = true;
+    moved = false;
+    viewport.classList.add('is-dragging');
+    startX = e.clientX;
+    startPos = x;
+  });
+
+  window.addEventListener('pointermove', e => {
+    if(!dragging) return;
+    if(Math.abs(e.clientX - startX) > 5) moved = true;
+    x = startPos + (e.clientX - startX);
+    wrap();
+    render();
+  });
+
+  const end = () => {
+    if(!dragging) return;
+    dragging = false;
+    viewport.classList.remove('is-dragging');
+  };
+  window.addEventListener('pointerup', end);
+  window.addEventListener('pointercancel', end);
+
+  // Evita una navegación accidental sólo cuando realmente se arrastró el carrusel.
+  viewport.addEventListener('click', e => {
+    if(moved && e.target.closest('a.sponsor-link')){
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    moved = false;
+  }, true);
+
+  // Doble click: abre explícitamente el sitio del sponsor en una pestaña nueva.
+  viewport.addEventListener('dblclick', e => {
+    const link = e.target.closest('a.sponsor-link');
+    if(!link || !link.href) return;
+    e.preventDefault();
+    window.open(link.href, '_blank', 'noopener,noreferrer');
+  });
+
+  viewport.addEventListener('wheel', e => {
+    if(Math.abs(e.deltaX) > Math.abs(e.deltaY)){
+      x -= e.deltaX;
+      wrap();
+      render();
+    }
+  });
+
+  window.addEventListener('resize', wrap);
+  render();
+  requestAnimationFrame(loop);
+})();
+</script>
+<!-- Navbar: cambia de estado al hacer scroll -->
+<script>
+(function(){
+  const nav = document.getElementById('mainNavbar');
+  if(!nav) return;
+  const update = () => nav.classList.toggle('navbar-scrolled', window.scrollY > 35);
+  update();
+  window.addEventListener('scroll', update, {passive:true});
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const roster = Array.from(document.querySelectorAll('#rosterGrid .roster-card'));
+  const inner = document.getElementById('plantelSpotlightInner');
+  const current = document.getElementById('spotlightCurrent');
+  const total = document.getElementById('spotlightTotal');
+  if (!inner || !roster.length) return;
+
+  total.textContent = String(roster.length).padStart(2,'0');
+  roster.forEach((card, index) => {
+    const img = card.querySelector('img');
+    const name = card.querySelector('h3')?.textContent.trim() || '';
+    const pos = card.querySelector('.roster-pos')?.textContent.trim() || '';
+    const dorsal = card.querySelector('.roster-dorsal')?.textContent.trim() || '—';
+    const parts = name.split(' ');
+    const first = parts.shift() || name;
+    const last = parts.join(' ');
+    const item = document.createElement('div');
+    item.className = 'carousel-item' + (index === 0 ? ' active' : '');
+    item.innerHTML = `
+      <div class="spotlight-slide spotlight-complete">
+        <div class="spotlight-number">${dorsal}</div>
+        <div class="spotlight-copy">
+          <span class="spotlight-label">PLANTEL SUPERIOR · 2026</span>
+          <h3>${first}<br><strong>${last}</strong></h3>
+          <p>${pos.toUpperCase()} <span>·</span> CAMISETA ${dorsal}</p>
+          <div class="spotlight-line"></div>
+          <small>Plantel profesional de Talleres · Temporada 2026</small>
+        </div>
+        <div class="spotlight-player"><img src="${img?.src || ''}" alt="${name}" loading="lazy"></div>
+      </div>`;
+    inner.appendChild(item);
+  });
+  const carousel = document.getElementById('plantelSpotlight');
+  carousel.addEventListener('slid.bs.carousel', function (event) {
+    current.textContent = String(event.to + 1).padStart(2,'0');
+  });
+});
+</script>
+<script>
+(function(){
+  const photo = document.getElementById('sociosEstadioPhoto');
+  const wrap = document.getElementById('sociosEstadioPhotoWrap');
+  const label = document.getElementById('sociosEstadioLabel');
+  const prices = document.getElementById('sociosEstadioPrices');
+  const hotspots = document.getElementById('sociosEstadioHotspots');
+  const buttons = Array.from(document.querySelectorAll('.socios-estadio-sector'));
+  if(!photo || !wrap || !label || !prices || !hotspots || !buttons.length) return;
+
+  const data = {
+    ardiles: {
+      name: 'PLATEA ARDILES',
+      image: 'assets/images/ardiles.webp',
+      alt: 'Platea Ardiles - Estadio Mario Alberto Kempes',
+      hotspots: ['main'],
+      prices: [
+        ['$147.970','SOCIO 1913'],
+        ['$82.160','SOCIO ALBIAZUL'],
+        ['$68.480','SOCIO CAT'],
+        ['$34.160','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    },
+    gasparini: {
+      name: 'PLATEA GASPARINI',
+      image: 'assets/images/gasparini.webp',
+      alt: 'Platea Gasparini - Estadio Mario Alberto Kempes',
+      hotspots: ['left','right'],
+      prices: [
+        ['$66.120','SOCIO 1913'],
+        ['$36.720','SOCIO ALBIAZUL'],
+        ['$30.560','SOCIO CAT'],
+        ['$15.280','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    },
+    willington: {
+      name: 'POPULAR WILLINGTON',
+      image: 'assets/images/willington.webp',
+      alt: 'Popular Willington - Estadio Mario Alberto Kempes',
+      hotspots: ['main'],
+      prices: [
+        ['$93.180','SOCIO 1913'],
+        ['$51.360','SOCIO ALBIAZUL'],
+        ['$42.800','SOCIO CAT'],
+        ['$21.360','SOCIO JUVENILES'],
+        ['$12.560','SOCIO NIÑOS']
+      ]
+    }
+  };
+
+  function renderPrices(items){
+    prices.querySelectorAll('.socios-estadio-price').forEach((row, i) => {
+      if(!items[i]) return;
+      row.querySelector('b').textContent = items[i][0];
+      row.querySelector('span').textContent = items[i][1];
+    });
+  }
+
+  function buildHotspots(key){
+    const item = data[key];
+    hotspots.innerHTML = '';
+    item.hotspots.forEach(type => {
+      const hotspot = document.createElement('span');
+      hotspot.className = 'socios-estadio-hotspot hotspot-' + type;
+      hotspot.dataset.sector = key;
+      hotspot.setAttribute('aria-label', item.name);
+      hotspots.appendChild(hotspot);
+
+      hotspot.addEventListener('mouseenter', () => showPrices());
+      hotspot.addEventListener('mouseleave', () => hidePrices());
+      hotspot.addEventListener('focus', () => showPrices());
+      hotspot.addEventListener('blur', () => hidePrices());
+      hotspot.addEventListener('click', () => showPrices());
+    });
+  }
+
+  function showPrices(){
+    prices.classList.add('is-visible');
+    prices.setAttribute('aria-hidden','false');
+  }
+
+  function hidePrices(){
+    prices.classList.remove('is-visible');
+    prices.setAttribute('aria-hidden','true');
+  }
+
+  function selectSector(key, showPricesOnSelect = false){
+    const item = data[key];
+    if(!item) return;
+    hidePrices();
+    photo.classList.add('is-changing');
+    window.setTimeout(() => {
+      photo.src = item.image;
+      photo.alt = item.alt;
+      label.querySelector('strong').textContent = item.name;
+      renderPrices(item.prices);
+      buildHotspots(key);
+      photo.classList.remove('is-changing');
+    }, 120);
+    buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.sector === key));
+    if(showPricesOnSelect) showPrices();
+  }
+
+  buttons.forEach(btn => {
+    const key = btn.dataset.sector;
+    // Los botones solo cambian la foto. Los precios aparecen únicamente
+    // al entrar en la zona naranja de la imagen.
+    btn.addEventListener('mouseenter', () => selectSector(key, false));
+    btn.addEventListener('focus', () => selectSector(key, false));
+    btn.addEventListener('click', () => selectSector(key, false));
+  });
+
+  selectSector('ardiles', false);
+})();
+</script>
+<script>
+(function(){
+  const form = document.getElementById('formConsultaSocio');
+  const status = document.getElementById('consultaSocioStatus');
+  if(!form || !status) return;
+
+  form.addEventListener('submit', async function(event){
+    event.preventDefault();
+    status.hidden = false;
+    status.className = 'consulta-socio-status is-loading';
+    status.textContent = 'ENVIANDO CONSULTA...';
+
+    const button = form.querySelector('button[type="submit"]');
+    const original = button ? button.innerHTML : '';
+    if(button){ button.disabled = true; button.innerHTML = 'ENVIANDO... <i class="bi bi-arrow-repeat"></i>'; }
+
+    try {
+      // Enviamos como application/x-www-form-urlencoded para que Vercel
+      // pueda leer req.body directamente. FormData (multipart/form-data)
+      // no se parsea automáticamente en esta función serverless.
+      const formData = new FormData(form);
+      const payload = new URLSearchParams();
+      formData.forEach((value, key) => payload.append(key, value));
+
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: payload,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        }
+      });
+      const data = await response.json();
+      if(!response.ok || !data.ok) throw new Error(data.message || 'No se pudo enviar la consulta.');
+
+      status.className = 'consulta-socio-status is-success';
+      status.textContent = data.message || '¡Recibimos tu consulta! Revisá tu email.';
+      form.reset();
+    } catch(error) {
+      status.className = 'consulta-socio-status is-error';
+      status.textContent = error.message || 'No pudimos enviar la consulta. Intentá nuevamente.';
+    } finally {
+      if(button){ button.disabled = false; button.innerHTML = original; }
+    }
+  });
+})();
+</script>
+</body>
+</html>
