@@ -1,3 +1,10 @@
+/* 
+   ESTILOS PRINCIPALES — SITIO WEB CLUB ATLÉTICO TALLERES
+   Diseño sobre Bootstrap 5.3.8.
+   Bootstrap aporta estructura responsive/componentes; este archivo
+   contiene la identidad visual, layouts y estilos personalizados.
+  */
+
 :root{
   --azul: #04162b;         /* Azul oficial de Talleres */
   --azul-oscuro: #020d1a;
@@ -18,6 +25,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
   letter-spacing: .3px;
 }
 
+/* TEXTOS AUXILIARES / ETIQUETAS */
 .eyebrow{
   display: inline-block;
   text-transform: uppercase;
@@ -33,6 +41,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 .section-alt{ background-color: var(--gris-suave); }
 
 /* Botones */
+/* BOTONES GENERALES DEL CLUB */
 .btn-albiazul{
   background-color: var(--blanco);
   color: var(--azul);
@@ -67,6 +76,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Navbar */
+/* NAVBAR: navegación principal y versión responsive */
 .navbar-club{
   background-color: var(--azul-oscuro);
   padding-top: .6rem;
@@ -100,6 +110,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* HERO / PORTADA — estética editorial de club de fútbol */
+/* HERO: portada con video, overlays y contenido */
 .hero-talleres{
   position: relative;
   min-height: 100svh;
@@ -238,6 +249,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
   background: rgba(255,255,255,.12);
   transform: translateY(-2px);
 }
+/* TARJETA DE IDENTIDAD: escudo, fundación y estadio */
 .hero-club-card{
   max-width: 330px;
   margin-left: auto;
@@ -305,6 +317,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
   height: 34px;
   background: rgba(255,255,255,.16);
 }
+/* ESTADÍSTICAS DE LA PORTADA */
 .hero-stats{
   margin-top: 2.5rem;
   border-top: 1px solid rgba(255,255,255,.20);
@@ -380,6 +393,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Identidad */
+/* TARJETAS DE IDENTIDAD / HISTORIA */
 .card-identidad{
   background: var(--blanco);
   border-radius: 14px;
@@ -393,6 +407,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Logros */
+/* TARJETAS DE LOGROS Y PALMARÉS */
 .card-logro{
   border-radius: 14px;
   padding: 2rem 1.5rem;
@@ -415,6 +430,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Plantel */
+/* PLANTEL: títulos, tarjetas y posiciones */
 .grupo-plantel-titulo{
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -478,6 +494,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Filtros del plantel */
+/* FILTROS DEL PLANTEL */
 .btn-filtro-plantel{
   border: 1.5px solid var(--azul);
   background: transparent;
@@ -497,6 +514,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Carrusel horizontal del plantel */
+/* CARRUSEL HORIZONTAL DEL PLANTEL */
 .plantel-carousel-wrap{
   position: relative;
   display: flex;
@@ -567,6 +585,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Resultados */
+/* RESULTADOS DE PARTIDOS */
 .card-resultado{
   border-radius: 14px;
   padding: 1.6rem;
@@ -601,6 +620,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Hinchada / testimonios */
+/* HINCHADA / TESTIMONIOS */
 .section-hinchada{
   background: linear-gradient(160deg, var(--azul) 0%, var(--azul-oscuro) 100%);
   color: var(--blanco);
@@ -610,6 +630,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Sponsors - carrusel infinito */
+/* SPONSORS: carrusel/logos de marcas */
 .section-sponsors{
   background-color: var(--blanco);
   padding: 2.5rem 0;
@@ -647,6 +668,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Tienda */
+/* TIENDA: tarjetas de productos */
 .card-producto{
   border: none;
   border-radius: 14px;
@@ -668,6 +690,7 @@ h1, h2, h3, h4, h5, h6, .fw-club{
 }
 
 /* Socios / carnet */
+/* SOCIOS: carnets y categorías */
 .card-carnet{
   border-radius: 18px;
   overflow: hidden;
@@ -989,6 +1012,7 @@ body{background:#fff;overflow-x:hidden;}
 /* History */
 .section-identidad{background:#fff;padding-top:105px;padding-bottom:105px;}
 .section-identidad::before{content:'CAT';position:absolute;right:-30px;top:30px;color:#edf1f5;font-family:'Jost',sans-serif;font-size:clamp(10rem,24vw,22rem);font-weight:900;line-height:1;pointer-events:none;}
+/* HISTORIA: composición de texto + imagen/datos */
 .history-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:center;position:relative;z-index:1;}
 .history-copy p{max-width:590px;color:#657181;font-size:1rem;line-height:1.8;margin:24px 0;}
 .diagonal-mark{width:72px;height:10px;margin-top:22px;background:repeating-linear-gradient(110deg,#1766c5 0 7px,transparent 7px 12px);}
@@ -1008,6 +1032,7 @@ body{background:#fff;overflow-x:hidden;}
 
 /* Palmares */
 .section-logros{background:#f2f4f7;padding-top:86px;padding-bottom:86px;}
+/* PALMARÉS: grilla de títulos */
 .palmares-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 .palmares-card{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:22px;background:#fff;border:1px solid #dfe4ea;min-height:190px;padding:24px;transition:.3s ease;}
 .palmares-card:hover{transform:translateY(-5px);border-color:#1766c5;box-shadow:0 18px 40px rgba(8,26,48,.09);}
@@ -1051,6 +1076,7 @@ body{background:#fff;overflow-x:hidden;}
 .section-resultados .section-kicker{color:#73aef0;}
 .section-resultados .club-link{color:#fff;border-color:rgba(255,255,255,.32);}
 .section-resultados .club-link:hover{background:#fff;color:#0b2441;border-color:#fff;}
+/* RESULTADOS: grilla de partidos */
 .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .match-card{min-height:240px;border:1px solid rgba(255,255,255,.18);padding:25px;background:linear-gradient(145deg,rgba(19,52,87,.8),rgba(5,24,46,.7));position:relative;display:flex;flex-direction:column;justify-content:space-between;}
 .match-card small{color:rgba(255,255,255,.5);font-size:.68rem;line-height:1.5;}
@@ -1088,6 +1114,7 @@ body{background:#fff;overflow-x:hidden;}
 
 /* Socios */
 .section-socios{background:#061a33;color:#fff;padding-top:100px;padding-bottom:100px;}
+/* SOCIOS: estructura general de la sección */
 .socios-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .socios-copy .section-kicker{color:#73aef0;}
 .socios-copy h2{color:#fff;font-size:clamp(3rem,6vw,5.5rem);}
@@ -1164,6 +1191,7 @@ body{background:#fff;overflow-x:hidden;}
 .plantel-index{color:#79b2f4;font-size:.68rem;letter-spacing:2px;font-weight:800;}
 .plantel-pro-intro p{margin:0;color:rgba(255,255,255,.58);font-size:.9rem;line-height:1.7;}
 .plantel-spotlight{margin-top:36px;position:relative;z-index:1;}
+/* PLANTEL DESTACADO: carrusel principal */
 .spotlight-slide{min-height:430px;background:linear-gradient(115deg,#0c3159 0%,#092340 50%,#06172c 100%);border:1px solid rgba(255,255,255,.13);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1.05fr;align-items:stretch;}
 .spotlight-slide::after{content:"TALLERES";position:absolute;right:-25px;bottom:-75px;font-family:'Jost',sans-serif;font-weight:900;font-size:9rem;letter-spacing:-5px;color:rgba(255,255,255,.035);pointer-events:none;}
 .spotlight-number{position:absolute;left:28px;top:24px;color:rgba(255,255,255,.18);font-family:'Jost',sans-serif;font-size:7rem;font-weight:900;line-height:.8;z-index:2;}
@@ -1189,6 +1217,7 @@ body{background:#fff;overflow-x:hidden;}
 .roster-filters{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px;}
 .roster-filter{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.58);padding:9px 14px;font-size:.61rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:.2s ease;}
 .roster-filter:hover,.roster-filter.active{background:#fff;border-color:#fff;color:#061a33;}
+/* PLANTEL: grilla de jugadores */
 .roster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;position:relative;z-index:1;}
 .roster-card{background:#0a2340;border:1px solid rgba(255,255,255,.11);overflow:hidden;transition:.3s ease;min-width:0;}
 .roster-card:hover{transform:translateY(-6px);border-color:#2e78cc;box-shadow:0 18px 45px rgba(0,0,0,.25);}
@@ -1209,6 +1238,7 @@ body{background:#fff;overflow-x:hidden;}
 .roster-foot a:hover{color:#73aef0;}
 
 .section-semillero{background:#f2f4f7;padding:0;overflow:hidden;position:relative;}
+/* FORMACIÓN / CANTERA */
 .semillero-grid{display:grid;grid-template-columns:.82fr 1.18fr;min-height:520px;}
 .semillero-copy{padding:95px 55px 95px 0;display:flex;flex-direction:column;justify-content:center;}
 .semillero-copy h2{font-family:'Jost',sans-serif;color:#0b2747;font-size:clamp(3rem,6vw,5.5rem);line-height:.86;letter-spacing:-2px;text-transform:uppercase;font-weight:900;margin:12px 0 24px;}
@@ -1297,6 +1327,7 @@ body{background:#fff;overflow-x:hidden;}
 /* Nueva sección: formación, con información clara y visual */
 .section-formacion{background:#f3f5f8;padding:105px 0 110px;position:relative;overflow:hidden;}
 .section-formacion::before{content:"FORMACIÓN";position:absolute;right:-45px;top:-70px;font-family:'Jost',sans-serif;font-size:16rem;line-height:1;font-weight:900;color:rgba(11,55,109,.035);pointer-events:none;}
+/* FORMACIÓN: encabezado de la sección */
 .formacion-head{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end;padding-bottom:42px;border-bottom:1px solid #d7dfe8;position:relative;z-index:1;}
 .formacion-head h2{font-family:'Jost',sans-serif;color:#0b2747;font-size:clamp(3.2rem,6.5vw,6rem);line-height:.84;letter-spacing:-3px;text-transform:uppercase;font-weight:900;margin:12px 0 0;}
 .formacion-head h2 em{font-style:normal;color:#1766c5;}
@@ -1304,6 +1335,7 @@ body{background:#fff;overflow-x:hidden;}
 .formacion-intro>span{font-size:.58rem;letter-spacing:2px;font-weight:900;color:#1766c5;}
 .formacion-intro p{font-size:.94rem;line-height:1.8;color:#687586;margin:16px 0 22px;}
 .formacion-link{display:inline-flex!important;align-items:center;gap:12px;}
+/* FORMACIÓN: tarjetas con fotografías */
 .formacion-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:32px;position:relative;z-index:1;}
 .formacion-card{min-height:390px;background:#fff;border:1px solid #dce3eb;padding:26px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
 .formacion-card:hover{transform:translateY(-7px);border-color:#1766c5;box-shadow:0 20px 50px rgba(11,39,71,.11);}
@@ -1373,6 +1405,7 @@ body{background:#fff;overflow-x:hidden;}
 .resultados-premium .container{position:relative;z-index:1;}
 .results-topline{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px;border-bottom:1px solid rgba(255,255,255,.13);padding-bottom:22px;}
 .results-topline h2{font-family:'Jost',sans-serif;font-size:clamp(2.6rem,5vw,5rem);line-height:.92;text-transform:uppercase;margin:7px 0 0;font-weight:900;letter-spacing:-2px;}
+/* RESULTADOS: partido destacado */
 .results-feature{display:grid;grid-template-columns:1fr 1.25fr;min-height:365px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(110deg,#0b2a4d,#09203a);margin-bottom:22px;}
 .results-feature-copy{padding:44px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.12);}
 .result-eyebrow,.results-history-head>span{font-size:.68rem;letter-spacing:2px;color:#61a8ff;font-weight:800;}
@@ -1390,6 +1423,7 @@ body{background:#fff;overflow-x:hidden;}
 .score-block span{font-size:.6rem;letter-spacing:1.5px;color:#ff8f8f;font-weight:800;}
 .results-history-head{display:flex;justify-content:space-between;align-items:center;margin:32px 0 13px;}
 .form-dots{display:flex;gap:6px;}.form-dots i{font-style:normal;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-size:.58rem;font-weight:900;}.loss-dot{background:#8e2634;color:#fff}.win-dot{background:#1f7d55;color:#fff}
+/* RESULTADOS: historial reciente */
 .results-history{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 .result-mini{position:relative;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);padding:18px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s ease;overflow:hidden;}
 .result-mini:hover{transform:translateY(-4px);background:rgba(255,255,255,.08);border-color:rgba(97,168,255,.45);}
@@ -1399,6 +1433,7 @@ body{background:#fff;overflow-x:hidden;}
 
 .tienda-premium{background:#f4f6f8!important;padding:100px 0 90px!important;}
 .shop-header{display:flex;justify-content:space-between;gap:50px;align-items:end;border-bottom:1px solid #d8dee6;padding-bottom:30px;margin-bottom:28px}.shop-header h2{font-family:'Jost',sans-serif;text-transform:uppercase;font-size:clamp(2.7rem,5vw,5.2rem);line-height:.88;font-weight:900;color:#08284a;letter-spacing:-2px;margin:8px 0 0}.shop-header h2 em{color:#1766c5;font-style:normal}.shop-header-copy{max-width:380px}.shop-header-copy p{color:#617086;line-height:1.7;margin-bottom:20px}
+/* MERCHANDISING: camisetas destacadas */
 .shirt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.shirt-feature{min-height:560px;display:grid;grid-template-columns:.85fr 1.15fr;position:relative;overflow:hidden}.shirt-blue{background:#08284a;color:#fff}.shirt-light{background:#fff;color:#08284a;border:1px solid #dce2e9}.shirt-copy{padding:36px 30px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;z-index:2}.shirt-copy>span{font-size:.62rem;letter-spacing:1.5px;font-weight:900;color:#5ba3f4;margin-bottom:auto}.shirt-copy h3{font-family:'Jost',sans-serif;text-transform:uppercase;font-size:2rem;line-height:.96;margin:0 0 12px;font-weight:800}.shirt-copy p{font-size:.65rem;letter-spacing:1px;opacity:.55}.shirt-copy b{font-family:'Jost',sans-serif;font-size:1.4rem;margin:8px 0 18px}.shirt-copy a{width:max-content;color:inherit;text-decoration:none;font-size:.65rem;font-weight:900;letter-spacing:1.2px;border-bottom:1px solid currentColor;padding-bottom:8px}.shirt-image{display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(45,112,192,.18),transparent 58%)}.shirt-light .shirt-image{background:linear-gradient(145deg,#edf2f7,#fff)}.shirt-image img{width:100%;height:100%;object-fit:contain;padding:35px;transition:transform .45s ease}.shirt-feature:hover .shirt-image img{transform:scale(1.06)}.shop-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding:20px 0;border-top:1px solid #d8dee6}.shop-bottom div{display:flex;flex-direction:column;gap:4px}.shop-bottom span{font-size:.58rem;letter-spacing:1.4px;color:#1766c5;font-weight:900}.shop-bottom strong{font-size:.68rem;letter-spacing:1px;color:#08284a}.shop-button{background:#08284a;color:#fff;text-decoration:none;padding:16px 22px;font-size:.65rem;font-weight:900;letter-spacing:1.2px;display:inline-flex;gap:12px;align-items:center}.shop-button:hover{background:#1766c5;color:#fff}
 
 @media(max-width:991px){.results-feature{grid-template-columns:1fr}.results-feature-copy{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}.results-history{grid-template-columns:repeat(2,1fr)}.shirt-grid{grid-template-columns:1fr}.shop-header{align-items:start;flex-direction:column;gap:18px}.next-match-banner{grid-template-columns:1fr;gap:18px}.next-match-badges{justify-content:flex-start}.sponsor-track img{width:150px;height:76px;padding:10px 22px}}
@@ -1414,6 +1449,7 @@ body{background:#fff;overflow-x:hidden;}
 .news-head h2 em{font-style:normal;color:#1766c5;}
 .news-head-copy{max-width:420px;}
 .news-head-copy p{color:#657487;line-height:1.7;margin:0 0 20px;}
+/* NOTICIAS: noticia principal + noticias secundarias */
 .news-grid{display:grid;grid-template-columns:1.45fr .8fr;gap:18px;position:relative;z-index:1;}
 .news-card{background:#fff;border:1px solid #dce2e8;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
 .news-card:hover{transform:translateY(-6px);border-color:#1766c5;box-shadow:0 20px 45px rgba(8,40,74,.11);}
@@ -1437,6 +1473,7 @@ body{background:#fff;overflow-x:hidden;}
 .news-body>a{color:#08284a;text-decoration:none;font-size:.62rem;font-weight:900;letter-spacing:1.3px;display:inline-flex;align-items:center;gap:10px;width:max-content;border-bottom:1px solid #aab6c2;padding-bottom:7px;}
 .news-body>a:hover{color:#1766c5;border-color:#1766c5;}
 
+/* FORMACIÓN: layout visual de imágenes */
 .formacion-grid-photo{grid-template-columns:1.2fr .9fr .9fr!important;gap:18px;}
 .formacion-card-photo{position:relative;min-height:470px!important;overflow:hidden;background:#08284a!important;color:#fff!important;border:0!important;box-shadow:none!important;isolation:isolate;}
 .formacion-card-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .55s ease;}
@@ -1450,6 +1487,7 @@ body{background:#fff;overflow-x:hidden;}
 .formacion-card-photo .formacion-card-footer{position:absolute;left:28px;right:28px;bottom:22px;z-index:2;color:#fff;border-top-color:rgba(255,255,255,.2);}
 
 .socios-reinventados{background:#061a33!important;padding:0 0 100px!important;position:relative;overflow:hidden;}
+/* SOCIOS: hero principal */
 .socios-hero{min-height:620px;display:grid;grid-template-columns:.9fr 1.1fr;gap:0;position:relative;}
 .socios-hero-copy{padding:110px 70px 90px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
 .socios-hero-copy h2{font-family:'Jost',sans-serif;text-transform:uppercase;color:#fff;font-size:clamp(3.4rem,6vw,6.4rem);line-height:.84;letter-spacing:-3px;font-weight:900;margin:12px 0 22px;}
@@ -1463,6 +1501,7 @@ body{background:#fff;overflow-x:hidden;}
 .socios-categories-head{display:flex;align-items:end;justify-content:space-between;gap:30px;border-top:1px solid rgba(255,255,255,.13);padding-top:70px;margin-top:0;}
 .socios-categories-head h3{font-family:'Jost',sans-serif;text-transform:uppercase;color:#fff;font-size:clamp(2rem,4vw,4rem);line-height:.9;letter-spacing:-1.5px;margin:9px 0 0;font-weight:900;}
 .socios-categories-head h3 em{font-style:normal;color:#62aaff;}
+/* SOCIOS: categorías */
 .socio-category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;}
 .socio-category{padding:26px 22px;background:#0b2949;border:1px solid rgba(255,255,255,.11);min-height:310px;display:flex;flex-direction:column;transition:.3s ease;}
 .socio-category:hover{transform:translateY(-5px);border-color:rgba(98,170,255,.65);background:#0d3157;}
@@ -1476,6 +1515,7 @@ body{background:#fff;overflow-x:hidden;}
 .socio-category li::before{content:'+';position:absolute;left:0;color:#62aaff;font-weight:900;}
 .socio-category>a{margin-top:auto;color:#fff;text-decoration:none;font-size:.6rem;font-weight:900;letter-spacing:1.2px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:7px;width:max-content;}
 .socio-category>a:hover{color:#72b4fb;border-color:#72b4fb;}
+/* SOCIOS: beneficios */
 .socios-benefits-grid{display:grid;grid-template-columns:1.25fr .875fr .875fr;gap:12px;margin-top:12px;}
 .socios-benefit-card{background:#fff;color:#08284a;min-height:290px;padding:30px;display:flex;gap:22px;position:relative;overflow:hidden;}
 .socios-benefit-app{padding:0;display:grid;grid-template-columns:.8fr 1.2fr;background:#0d3157;color:#fff;}
@@ -2514,18 +2554,19 @@ body{background:#fff;overflow-x:hidden;}
 .consulta-socio-status.is-error{border-left-color:#b52b36;background:#fff2f3;color:#8a1d28;}
 
 
-/* ===== SPONSORS FIX — CARRUSEL JS ===== */
-.section-sponsors-main { background:#fff; border-bottom:1px solid #d9e0e8; overflow:hidden; }
-.sponsors-head { min-height:82px; padding:14px clamp(22px,5vw,72px); display:flex; align-items:center; justify-content:space-between; gap:24px; border-bottom:1px solid #e3e8ee; }
-.sponsors-head > div:first-child { display:flex; align-items:baseline; gap:18px; }
-.sponsors-head span { font-size:.68rem; font-weight:900; letter-spacing:2.5px; color:#0b376d; }
-.sponsors-head small { font-size:.72rem; color:#7b8794; }
-.sponsors-note { font-size:.55rem; letter-spacing:1.4px; font-weight:900; color:#1766c5; white-space:nowrap; }
-.sponsor-marquee { position:relative; width:100%; overflow:hidden; padding:18px 0; cursor:grab; touch-action:pan-y; user-select:none; -webkit-user-select:none; }
-.sponsor-marquee.is-dragging { cursor:grabbing; }
-.sponsor-track { display:flex; align-items:center; width:max-content; min-width:max-content; will-change:transform; animation:none!important; }
-.sponsor-link { display:flex; align-items:center; justify-content:center; flex:0 0 auto; width:170px; height:84px; text-decoration:none; cursor:pointer; user-select:none; -webkit-user-select:none; }
-.sponsor-link img { display:block; width:130px; height:68px; padding:8px 18px; object-fit:contain; flex:none; opacity:.9; filter:brightness(0) saturate(100%) invert(20%) sepia(32%) saturate(1250%) hue-rotate(174deg) brightness(88%) contrast(96%); transition:transform .25s ease,filter .25s ease,opacity .25s ease; }
-.sponsor-link:hover img { filter:none; opacity:1; transform:scale(1.1); }
-@media(max-width:991.98px){ .sponsors-head{align-items:flex-start;} .sponsors-head>div:first-child{flex-direction:column;gap:4px;} .sponsor-link{width:155px;height:78px;} .sponsor-link img{width:120px;height:64px;padding:8px 16px;} }
-@media(max-width:767.98px){ .sponsors-head{padding:15px 20px;flex-direction:column;align-items:flex-start;gap:8px;} .sponsors-note{align-self:flex-start;} .sponsor-marquee{padding:12px 0;} .sponsor-link{width:140px;height:70px;} .sponsor-link img{width:110px;height:58px;padding:7px 14px;} }
+/* SPONSORS: los logos son enlaces y no interfieren con el arrastre del carrusel. */
+.sponsor-link{display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;user-select:none;flex:0 0 auto;}
+.sponsor-link img{cursor:pointer;}
+.sponsor-marquee.is-dragging{cursor:grabbing;}
+
+
+/* SPONSORS — FIX FINAL: links + infinite loop + drag */
+.section-sponsors-main{background:#fff;border-bottom:1px solid #d9e0e8;overflow:hidden;}
+.sponsor-marquee{position:relative;width:100%;overflow:hidden;padding:18px 0;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;}
+.sponsor-marquee.is-dragging{cursor:grabbing;}
+.sponsor-track{display:flex!important;align-items:center;width:max-content!important;min-width:max-content;animation:none!important;will-change:transform;}
+.sponsor-link{display:flex!important;align-items:center;justify-content:center;flex:0 0 auto;width:170px;height:84px;text-decoration:none;cursor:pointer;user-select:none;-webkit-user-select:none;}
+.sponsor-link img{display:block;width:130px;height:68px;padding:8px 18px;object-fit:contain;flex:none;border:0!important;border-right:0!important;opacity:.9;filter:brightness(0) saturate(100%) invert(20%) sepia(32%) saturate(1250%) hue-rotate(174deg) brightness(88%) contrast(96%);transition:transform .25s ease,filter .25s ease,opacity .25s ease;}
+.sponsor-link:hover img{filter:none;opacity:1;transform:scale(1.1);}
+@media(max-width:991.98px){.sponsor-link{width:155px;height:78px}.sponsor-link img{width:120px;height:64px;padding:8px 16px}}
+@media(max-width:575px){.sponsor-link{width:140px;height:70px}.sponsor-link img{width:110px;height:58px;padding:7px 14px}}
